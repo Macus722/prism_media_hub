@@ -15,11 +15,9 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-black': '#050505',
-                        'brand-dark': '#111111',
-                        'brand-red': '#FF2D46',
-                        'brand-red-hover': '#d91b32',
-                        'brand-gray': '#1F1F1F',
+                        'brand-purple': '#221A31',
+                        'brand-orange': '#f97316',
+                        'brand-white': '#ffffff',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif']
@@ -39,72 +37,83 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #111;
+            background: #221A31;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #333;
+            background: #362B4D;
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #555;
+            background: #4B3C69;
+        }
+
+        /* Context-Aware Logo Rendering */
+        .brand-logo {
+            mix-blend-mode: screen !important;
+        }
+
+        .bg-brand-white .brand-logo,
+        .bg-white .brand-logo {
+            mix-blend-mode: normal !important;
+            filter: brightness(0) invert(13%) sepia(18%) saturate(1518%) hue-rotate(216deg) brightness(92%) contrast(91%) !important;
         }
     </style>
 </head>
 
-<body class="bg-brand-black text-white antialiased flex h-screen overflow-hidden">
+<body class="bg-brand-purple text-brand-white antialiased flex h-screen overflow-hidden">
 
     <!-- Sidebar -->
     <aside
-        class="w-64 bg-brand-dark border-r border-white/5 flex flex-col justify-between hidden md:flex flex-shrink-0">
+        class="w-64 bg-brand-purple border-r border-brand-white/10 flex flex-col justify-between hidden md:flex flex-shrink-0">
         <div class="flex flex-col h-full">
             <!-- Logo -->
-            <div class="h-20 flex items-center px-8 border-b border-white/5 flex-shrink-0">
-                <img class="h-16 w-auto object-contain brightness-100" src="{{ asset('Images/prism_logo_v2.png') }}"
-                    alt="Prism Media Hub">
+            <div class="h-20 flex items-center px-8 border-b border-brand-white/10 flex-shrink-0">
+                <img class="brand-logo bg-transparent h-16 w-auto object-contain"
+                    src="{{ asset('Images/prism_media_logo_FA-02.png') }}" alt="Prism Media Hub">
             </div>
 
             <!-- Navigation -->
             <nav class="flex-1 p-4 space-y-2 overflow-y-auto">
                 <!-- 1. Dashboard -->
                 <a href="{{ url('admin') }}"
-                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin') && !request()->has('status') ? 'bg-brand-red text-white shadow-lg shadow-red-900/20' : 'text-gray-400 hover:text-white hover:bg-white/5' }} rounded-xl transition">
+                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin') && !request()->has('status') ? 'bg-brand-orange text-brand-white shadow-lg shadow-orange-500/20' : 'text-brand-white/70 hover:text-brand-white hover:bg-white/5' }} rounded-xl transition">
                     <i class="fas fa-home w-5"></i>
                     <span class="font-medium">Dashboard</span>
                 </a>
 
                 <!-- 2. Order Management -->
                 <a href="{{ url('admin/orders') }}"
-                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin/orders*') ? 'bg-brand-red text-white shadow-lg shadow-red-900/20' : 'text-gray-400 hover:text-white hover:bg-white/5' }} rounded-xl transition">
+                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin/orders*') ? 'bg-brand-orange text-brand-white shadow-lg shadow-orange-500/20' : 'text-brand-white/70 hover:text-brand-white hover:bg-white/5' }} rounded-xl transition">
                     <i class="fas fa-tasks w-5"></i>
                     <span class="font-medium">Order Management</span>
                 </a>
 
                 <!-- 3. Service Manager (Settings) -->
                 <a href="{{ url('admin/settings') }}"
-                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin/settings*') ? 'bg-brand-red text-white shadow-lg shadow-red-900/20' : 'text-gray-400 hover:text-white hover:bg-white/5' }} rounded-xl transition">
+                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin/settings*') ? 'bg-brand-orange text-brand-white shadow-lg shadow-orange-500/20' : 'text-brand-white/70 hover:text-brand-white hover:bg-white/5' }} rounded-xl transition">
                     <i class="fas fa-sliders-h w-5"></i>
                     <span class="font-medium">Service Manager</span>
                 </a>
 
                 <!-- 4. Staff/User Management -->
                 <a href="{{ url('admin/staff') }}"
-                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin/staff*') ? 'bg-brand-red text-white shadow-lg shadow-red-900/20' : 'text-gray-400 hover:text-white hover:bg-white/5' }} rounded-xl transition">
+                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin/staff*') ? 'bg-brand-orange text-brand-white shadow-lg shadow-orange-500/20' : 'text-brand-white/70 hover:text-brand-white hover:bg-white/5' }} rounded-xl transition">
                     <i class="fas fa-users-cog w-5"></i>
                     <span class="font-medium">Staff Management</span>
                 </a>
 
                 <!-- 5. Sales Report -->
                 <a href="{{ url('admin/reports/sales') }}"
-                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin/reports/sales*') ? 'bg-brand-red text-white shadow-lg shadow-red-900/20' : 'text-gray-400 hover:text-white hover:bg-white/5' }} rounded-xl transition">
+                    class="flex items-center gap-3 px-4 py-3 {{ request()->is('admin/reports/sales*') ? 'bg-brand-orange text-brand-white shadow-lg shadow-orange-500/20' : 'text-brand-white/70 hover:text-brand-white hover:bg-white/5' }} rounded-xl transition">
                     <i class="fas fa-chart-bar w-5"></i>
                     <span class="font-medium">Sales Report</span>
                 </a>
 
-                <div class="pt-4 border-t border-white/5 mt-4">
+                <div class="pt-4 border-t border-brand-white/10 mt-4">
                     <button onclick="window.location.href='{{ url('admin/logout') }}'"
-                        class="w-full flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition">
+                        class="w-full flex items-center gap-3 px-4 py-3 text-brand-white/70 hover:text-brand-white hover:bg-white/5 rounded-xl transition">
                         <i class="fas fa-sign-out-alt w-5"></i>
                         <span class="font-medium">Logout</span>
                     </button>
@@ -112,12 +121,14 @@
             </nav>
 
             <!-- User Info -->
-            <div class="p-4 border-t border-white/5 flex-shrink-0">
+            <div class="p-4 border-t border-brand-white/10 flex-shrink-0">
                 <div class="flex items-center gap-3 px-4 py-3">
-                    <div class="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center font-bold">A</div>
+                    <div
+                        class="w-8 h-8 rounded-full bg-brand-orange text-brand-white flex items-center justify-center font-bold">
+                        A</div>
                     <div>
-                        <div class="text-sm font-bold">Admin</div>
-                        <div class="text-xs text-gray-500">Super User</div>
+                        <div class="text-sm font-bold text-brand-white">Admin</div>
+                        <div class="text-xs text-brand-white/70">Super User</div>
                     </div>
                 </div>
             </div>
@@ -125,13 +136,15 @@
     </aside>
 
     <!-- Main Content Wrapper -->
-    <div class="flex-1 flex flex-col h-full overflow-hidden">
+    <div class="flex-1 flex flex-col h-full overflow-hidden bg-white text-[#3c4043]">
 
         <!-- Mobile Header -->
         <header
-            class="h-16 bg-brand-dark border-b border-white/5 flex md:hidden items-center justify-between px-4 flex-shrink-0">
-            <img class="h-10 w-auto" src="{{ asset('Images/prism_verified_v2.png') }}" alt="Prism Media Hub">
-            <button onclick="confirmLogout()" class="text-gray-400"><i class="fas fa-sign-out-alt"></i></button>
+            class="h-16 bg-white border-b border-[#e8eaed] flex md:hidden items-center justify-between px-4 flex-shrink-0">
+            <img class="brand-logo h-10 w-auto object-contain" src="{{ asset('Images/prism_media_logo_FA-02.png') }}"
+                alt="Prism Media Hub">
+            <button onclick="confirmLogout()" class="text-[#5f6368] hover:text-[#3c4043]"><i
+                    class="fas fa-sign-out-alt"></i></button>
         </header>
 
         <!-- Main Content Scrollable Area -->
@@ -143,9 +156,9 @@
                             icon: 'success',
                             title: 'Success!',
                             text: "{{ session('success') }}",
-                            background: '#111',
-                            color: '#fff',
-                            confirmButtonColor: '#FF2D46'
+                            background: '#fff',
+                            color: '#111',
+                            confirmButtonColor: '#f97316'
                         });
                     });
                 </script>
@@ -162,11 +175,15 @@
                 text: "Are you sure you want to end your session?",
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#FF2D46',
-                cancelButtonColor: '#333',
+                confirmButtonColor: '#f97316',
+                cancelButtonColor: '#e5e7eb',
                 confirmButtonText: 'Yes, Logout',
-                background: '#111',
-                color: '#fff'
+                cancelButtonText: 'Cancel',
+                background: '#fff',
+                color: '#111',
+                customClass: {
+                    cancelButton: 'text-gray-800'
+                }
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = "{{ url('admin/logout') }}";

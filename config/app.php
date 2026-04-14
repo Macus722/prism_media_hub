@@ -61,6 +61,15 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Orders / Checkout Enabled
+    |--------------------------------------------------------------------------
+    | Set to true when backend is ready. When false, order buttons are hidden
+    | and /checkout is blocked (redirects to home).
+    */
+    'orders_enabled' => env('ORDERS_ENABLED', false),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
     |

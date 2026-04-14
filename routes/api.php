@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// White Label Network Receiver API Routes
+Route::get('/health', [\App\Http\Controllers\NetworkController::class, 'health']);
+
+Route::middleware('sync.token')->group(function () {
+    Route::post('/system/control', [\App\Http\Controllers\NetworkController::class, 'control']);
+});

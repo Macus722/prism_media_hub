@@ -12,7 +12,7 @@ class CheckoutController extends Controller
 {
     // Removed hardcoded prices. Using DB 'settings' table.
 
-    protected $adminEmail = 'admin@brandthirty.com';
+    protected $adminEmail = 'admin@prismmediahub.test';
     protected $whatsappNumber = "601111293598";
     protected $costPerReach = 200;
 
@@ -30,7 +30,7 @@ class CheckoutController extends Controller
             'website' => 'nullable|url|max:255',
             'plan' => 'required|string',
             'strategy' => 'required|string',
-            'distribution' => 'required|integer|min:1|max:10',
+            'distribution' => 'required|integer|min:1|max:50',
         ]);
 
         // 2. Calculate Costs
@@ -64,8 +64,8 @@ class CheckoutController extends Controller
         }
 
         // Distribution Cost
-        $distCost = $distributionCount * $this->costPerReach;
-        $grandTotal += $distCost;
+        // $distCost = $distributionCount * $this->costPerReach;
+        // $grandTotal += $distCost; // Commented out as base package prices already bundle the distribution cost
 
         // Generate preliminary Order ID for display
         $orderId = 'B30-' . strtoupper(Str::random(6));
@@ -142,7 +142,7 @@ class CheckoutController extends Controller
                 }
 
                 // 3. Distribution Cost
-                $grandTotal += ($distributionCount * $this->costPerReach);
+                // $grandTotal += ($distributionCount * $this->costPerReach); // Already bundled in base price
 
                 // Check if connection works, else handle gracefully (Laravel handles DB connection errors)
                 DB::table('orders')->insert([

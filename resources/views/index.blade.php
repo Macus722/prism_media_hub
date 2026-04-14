@@ -12,8 +12,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -22,50 +21,39 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-black': '#05050a', /* Deep Space Black */
-                        'brand-dark': '#0a0a12',
-                        'brand-blue': '#00ffff', /* Electric Blue */
-                        'brand-blue-hover': '#00cccc',
-                        'neon-pink': '#ff00ff',
-                        'glass-bg': 'rgba(15, 15, 25, 0.7)',
-                        'glass-border': 'rgba(0, 255, 255, 0.2)',
+                        'brand-purple': '#221A31', /* Deep Purple */
+                        'brand-orange': '#f97316', /* Vibrant Orange */
+                        'brand-white': '#ffffff',  /* Pure White */
+                        'glass-bg': 'rgba(34, 26, 49, 0.9)',
+                        'glass-border': 'rgba(255, 255, 255, 0.06)',
                     },
                     fontFamily: {
-                        sans: ['Rajdhani', 'sans-serif'],
-                        display: ['Orbitron', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Inter', 'sans-serif'],
                     },
                     boxShadow: {
-                        'neon-blue': '0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3)',
-                        'neon-pink': '0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3)',
+                        'subtle': '0 8px 20px rgba(15, 23, 42, 0.06)',
+                        'card': '0 18px 45px rgba(15, 23, 42, 0.08)',
                     },
                     animation: {
                         'scroll': 'scroll 40s linear infinite',
-                        'flicker': 'flicker 2s infinite',
                     },
                     keyframes: {
                         scroll: {
                             '0%': { transform: 'translateX(0)' },
                             '100%': { transform: 'translateX(-50%)' },
                         },
-                        flicker: {
-                            '0%, 19%, 21%, 23%, 25%, 54%, 56%, 100%': { opacity: 1 },
-                            '20%, 24%, 55%': { opacity: 0.7 },
-                        }
-                    }
+                    },
                 }
             }
         }
     </script>
     <style>
         body {
-            font-family: 'Rajdhani', sans-serif;
-            background-color: #05050a;
-            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #111827;
             overflow-x: hidden;
-            background-image:
-                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
         }
 
         h1,
@@ -74,9 +62,9 @@
         h4,
         h5,
         h6 {
-            font-family: 'Orbitron', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.025em;
         }
 
         .hover\:pause:hover {
@@ -92,18 +80,16 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #05050a;
+            background: #221A31;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #00ffff;
+            background: #362B4D;
             border-radius: 4px;
-            box-shadow: 0 0 10px #00ffff;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #ff00ff;
-            box-shadow: 0 0 10px #ff00ff;
+            background: #4B3C69;
         }
 
         details>summary {
@@ -118,167 +104,38 @@
         .pricing-table th,
         .pricing-table td {
             padding: 1rem;
-            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
-            color: #ccc;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+            color: #4b5563;
         }
 
         .pricing-table tr:last-child td {
             border-bottom: none;
         }
 
+        .modern-card {
+            background: #ffffff;
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .modern-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+            border-color: rgba(148, 163, 184, 0.45);
+        }
+
         .glass-card {
-            background: rgba(15, 15, 25, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
             transition: all 0.3s ease;
         }
 
         .glass-card:hover {
-            border-color: #ff00ff;
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
-        }
-
-        .text-glow {
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5);
-        }
-
-        .text-glow-pink {
-            text-shadow: 0 0 5px rgba(255, 0, 255, 0.5), 0 0 10px rgba(255, 0, 255, 0.8);
-        }
-
-        .neon-border {
-            position: relative;
-            overflow: hidden;
-            transition: 0.3s;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), inset 0 0 10px rgba(0, 255, 255, 0.2);
-            border: 1px solid #00ffff;
-        }
-
-        .neon-border:hover {
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.6), inset 0 0 10px rgba(255, 0, 255, 0.3);
-            border-color: #ff00ff;
-            animation: flicker 1.5s infinite alternate;
-        }
-    </style>
-</head>
-
-<body class="antialiased selection:bg-neon-pink selection:text-white">
-
-    <nav class="fixed w-full z-50 transition-all duration-300 border-b border-brand-blue/20 bg-brand-black/90 backdrop-blur-md shadow-[0_0_15px_rgba(0,255,255,0.1)]"
-        id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
-                <div class="flex-shrink-0 flex items-center cursor-pointer">
-                    <!-- Logo Image -->
-                    <img src="{{ asset('Images/prism_logo_v2.png') }}" alt="Prism Media Hub"
-                        class="h-24 w-auto object-contain">
-                </div>
-
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#how-it-works"
-                        class="text-sm font-medium text-gray-300 hover:text-brand-blue hover:text-glow transition-all duration-300 font-display tracking-wide uppercase">How
-                        it Works</a>
-                    <a href="#features"
-                        class="text-sm font-medium text-gray-300 hover:text-brand-blue hover:text-glow transition-all duration-300 font-display tracking-wide uppercase">SEO
-                        Features</a>
-                    <a href="#case-studies"
-                        class="text-sm font-medium text-gray-300 hover:text-brand-blue hover:text-glow transition-all duration-300 font-display tracking-wide uppercase">Results</a>
-                    <a href="#pricing"
-                        class="text-sm font-medium text-gray-300 hover:text-brand-blue hover:text-glow transition-all duration-300 font-display tracking-wide uppercase">Pricing</a>
-                </div>
-
-                <div class="hidden md:block">
-                    <a href="#pricing"
-                        class="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-brand-black transition-all duration-200 bg-brand-blue font-display tracking-widest uppercase clip-path-polygon hover:bg-white hover:text-neon-pink shadow-[0_0_20px_rgba(0,255,255,0.5)] hover:shadow-[0_0_30px_rgba(255,0,255,0.6)]">
-                        Get Started
-                        <i class="fas fa-bolt ml-2 group-hover:animate-pulse"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <section class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
-
-        <div class="absolute inset-0 z-0">
-            <!-- Scanline Overlay -->
-            <div class="absolute inset-0 z-20 pointer-events-none"
-                style="background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)); background-size: 100% 2px, 3px 100%; opacity: 0.15;">
-            </div>
-
-            <video autoplay loop muted playsinline class="w-full h-full object-cover"
-                style="filter: contrast(120%) brightness(80%) hue-rotate(180deg) saturate(1.2);">
-                <source src="{{ asset('Images/hero-video.mp4') }}" type="video/mp4">
-                <img src="{{ asset('Images/hero-fallback.jpg') }}" alt="Hero Background"
-                    class="w-full h-full object-cover">
-            </video>
-
-            <div class="absolute inset-0 bg-brand-black/80"></div>
-            <!-- Vignette -->
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(5,5,10,0.8)_100%)]">
-            </div>
-        </div>
-
-        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-            <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-[0.2em] mb-8 backdrop-blur-sm animate-fade-in-up shadow-[0_0_15px_rgba(0,255,255,0.2)]">
-                <span class="w-2 h-2 rounded-full bg-brand-blue shadow-[0_0_10px_#00ffff] animate-pulse"></span>
-                New: DeepSeek & ChatGPT Indexing
-            </div>
-
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-none mb-6 animate-fade-in-up font-display"
-                style="animation-delay: 0.1s; text-shadow: 0 0 10px rgba(0,255,255,0.5);">
-                ESTABLISH DOMINANCE ON <br>
-                <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-white to-neon-pink animate-gradient-x"
-                    style="text-shadow: 0 0 20px rgba(0,255,255,0.4);">GOOGLE & GENERATIVE AI</span>
-            </h1>
-
-            <p class="mt-8 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-fade-in-up font-light tracking-wide"
-                style="animation-delay: 0.2s;">
-                Asia's Premier Reputation Infrastructure. <span class="text-brand-blue font-bold">Precision-Engineered
-                    Narratives.</span>
-                <br class="hidden md:block">
-                Amplify SEO Authority and Secure Strategic Citations across <span
-                    class="text-neon-pink font-bold">ChatGPT, Gemini, and Next-Gen Models</span>.
-            </p>
-
-            <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up"
-                style="animation-delay: 0.3s;">
-                <a href="#pricing"
-                    class="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-brand-black transition-all duration-300 bg-brand-blue clip-path-polygon hover:bg-white hover:text-neon-pink shadow-[0_0_30px_rgba(0,255,255,0.4)] hover:shadow-[0_0_50px_rgba(255,0,255,0.6)] group font-display tracking-widest uppercase">
-                    Get My Blue Plan
-                    <div
-                        class="absolute inset-0 bg-white/20 group-hover:translate-x-full duration-500 transition-transform skew-x-12 opacity-50">
-                    </div>
-                </a>
-                <a href="#how-it-works"
-                    class="relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-brand-blue transition-all duration-300 bg-transparent border border-brand-blue clip-path-polygon hover:bg-brand-blue/10 hover:text-white hover:border-white hover:shadow-[0_0_20px_rgba(0,255,255,0.3)] font-display tracking-widest uppercase backdrop-blur-md">
-                    <i class="fas fa-play mr-3 text-xs"></i> See Results
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <style>
-        /* Custom Animations */
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
+            transform: translateY(-4px);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+            border-color: rgba(148, 163, 184, 0.45);
         }
 
         @keyframes fadeInUp {
@@ -295,144 +152,176 @@
 
         .animate-fade-in-up {
             opacity: 0;
-            /* Initially hidden */
             animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        @keyframes writing {
-            0% {
-                transform: rotate(0deg) translate(0, 0);
-            }
-
-            25% {
-                transform: rotate(-2deg) translate(-1px, 1px);
-            }
-
-            50% {
-                transform: rotate(2deg) translate(1px, -1px);
-            }
-
-            75% {
-                transform: rotate(-1deg) translate(-1px, 0);
-            }
-
-            100% {
-                transform: rotate(0deg) translate(0, 0);
-            }
+        /* Context-Aware Logo Rendering */
+        .brand-logo {
+            mix-blend-mode: screen !important;
         }
 
-        @keyframes spin-slow {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes float-soft {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-6px);
-            }
-        }
-
-        .animate-writing {
-            animation: writing 2s ease-in-out infinite;
-        }
-
-        .animate-spin-slow {
-            animation: spin-slow 8s linear infinite;
-        }
-
-        .animate-float-soft {
-            animation: float-soft 3s ease-in-out infinite;
+        .bg-brand-white .brand-logo,
+        .bg-white .brand-logo {
+            mix-blend-mode: normal !important;
+            filter: brightness(0) invert(13%) sepia(18%) saturate(1518%) hue-rotate(216deg) brightness(92%) contrast(91%) !important;
         }
     </style>
-    <section class="bg-[#080814] border-y border-brand-blue/20 py-48 overflow-hidden relative">
-        <div
-            class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10">
+</head>
+
+<body class="antialiased selection:bg-brand-orange selection:text-brand-white">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 border-b border-brand-white/10 bg-brand-purple/90 backdrop-blur-sm shadow-sm"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center cursor-pointer bg-transparent border-0 shadow-none">
+                    <!-- Logo Image -->
+                    <img src="{{ asset('Images/prism_media_logo_FA-02.png') }}" alt="Prism Media Hub"
+                        class="brand-logo bg-transparent border-0 shadow-none h-32 w-auto object-contain">
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#how-it-works"
+                        class="text-sm font-medium text-brand-white/80 hover:text-brand-orange transition-all duration-300 tracking-wide">How
+                        it Works</a>
+                    <a href="#features"
+                        class="text-sm font-medium text-brand-white/80 hover:text-brand-orange transition-all duration-300 tracking-wide">SEO
+                        Features</a>
+                    <a href="#case-studies"
+                        class="text-sm font-medium text-brand-white/80 hover:text-brand-orange transition-all duration-300 tracking-wide">Results</a>
+                    <a href="#pricing"
+                        class="text-sm font-medium text-brand-white/80 hover:text-brand-orange transition-all duration-300 tracking-wide">Pricing</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="#pricing"
+                        class="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-brand-purple transition-all duration-200 bg-brand-orange rounded-md hover:bg-brand-orange/90 shadow-md">
+                        Get Started
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- Subtle glow behind logos -->
-        <div
-            class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,255,255,0.06)_0%,transparent_70%)] pointer-events-none">
+    </nav>
+
+    <section class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden bg-brand-purple">
+
+        <div class="absolute inset-0 z-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-70">
+                <source src="{{ asset('Images/hero-video.mp4') }}" type="video/mp4">
+                <img src="{{ asset('Images/hero-fallback.jpg') }}" alt="Hero Background"
+                    class="w-full h-full object-cover">
+            </video>
+
+            <div class="absolute inset-0 bg-brand-purple/70"></div>
+            <!-- Vignette: keep edges darker so text stays readable, center clearer for video -->
+            <div
+                class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,transparent_0%,rgba(34,26,49,0.7)_70%,#221A31_100%)]">
+            </div>
         </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-white/10 bg-brand-white/5 text-brand-white/80 text-xs font-semibold tracking-wider mb-8 backdrop-blur-sm animate-fade-in-up">
+                <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+                New: DeepSeek & ChatGPT Indexing
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-brand-white tracking-tight leading-tight mb-6 animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+                ESTABLISH DOMINANCE ON <br>
+                <span class="text-brand-white">GOOGLE & GENERATIVE AI</span>
+            </h1>
+
+            <p class="mt-8 text-xl md:text-2xl text-brand-white/80 max-w-3xl mx-auto leading-relaxed animate-fade-in-up font-normal"
+                style="animation-delay: 0.2s;">
+                Asia's Premier Reputation Infrastructure. <span
+                    class="text-brand-white font-medium">Precision-Engineered
+                    Narratives.</span>
+                <br class="hidden md:block">
+                Amplify SEO Authority and Secure Strategic Citations across <span
+                    class="text-brand-white font-medium">ChatGPT, Gemini, and Next-Gen Models</span>.
+            </p>
+
+            <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up"
+                style="animation-delay: 0.3s;">
+                <a href="#pricing"
+                    class="relative inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-brand-purple transition-all duration-300 bg-brand-orange rounded-lg hover:bg-brand-orange/90 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                    Get My Plan
+                </a>
+                <a href="#how-it-works"
+                    class="relative inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-brand-white transition-all duration-300 bg-transparent border border-brand-white/20 rounded-lg hover:bg-brand-white/5 hover:border-brand-white/40">
+                    <i class="fas fa-play mr-3 text-xs"></i> See Results
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-brand-white border-y border-brand-purple/10 py-32 overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 mb-16 text-center relative z-10" data-aos="fade-up">
-            <p class="text-xl font-bold text-brand-blue uppercase tracking-[0.3em] font-display text-glow">FEATURED
+            <p class="text-sm font-bold text-brand-purple uppercase tracking-widest">FEATURED
                 ACROSS GLOBAL AUTHORITY NETWORKS
             </p>
         </div>
         <div class="relative w-full overflow-hidden">
-            <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#080814] to-transparent z-10"></div>
-            <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#080814] to-transparent z-10"></div>
+            <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-white to-transparent z-10">
+            </div>
+            <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-white to-transparent z-10">
+            </div>
             <div class="relative w-full overflow-hidden">
                 <div class="relative w-full overflow-hidden">
-                    <!-- Desktop Scroll: w-max = natural width, translateX(-50%) loops seamlessly -->
+                    <!-- Desktop Scroll: grayscale by default, full color + scale on hover/active -->
                     <div class="hidden md:flex w-max animate-scroll hover:pause">
                         @php
                             $logos = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '8.png', 'BOSS (1).png', '未命名的设计 (1) (1).png', '未命名的设计 (9).png', '未命名的设计 (10).png', '未命名的设计 (12).png', '未命名的设计 (13).png', '未命名的设计 (14).png'];
                         @endphp
-                        {{-- Two identical sets for infinite loop --}}
                         @foreach([1, 2] as $set)
                             <div class="flex items-center">
                                 @foreach($logos as $logo)
-                                    <div class="flex items-center justify-center mx-10" style="min-width:160px;">
+                                    <div
+                                        class="flex items-center justify-center mx-6 min-w-[180px] h-24 overflow-hidden cursor-pointer group/logo">
                                         <img src="{{ asset('Images/' . $logo) }}"
-                                            class="h-20 max-h-20 w-auto max-w-[150px] object-contain transition-all duration-300 hover:scale-110"
-                                            style="filter: brightness(1.8) contrast(1.1);" alt="Logo">
+                                            class="h-20 max-h-20 w-auto max-w-[180px] object-contain transition-transform duration-[0.4s] ease-in-out group-hover/logo:scale-105 group-active/logo:scale-105"
+                                            alt="Logo">
                                     </div>
                                 @endforeach
                             </div>
                         @endforeach
                     </div>
-                    <!-- Mobile Grid: 2 cols, fixed-width slots -->
+                    <!-- Mobile Grid: same grayscale → color interaction, even spacing, vertically centered -->
                     <div class="grid grid-cols-2 gap-6 md:hidden px-6 py-4 justify-items-center items-center">
                         @foreach($logos as $logo)
-                            <div class="flex items-center justify-center" style="min-width:130px; min-height:80px;">
-                                <img src="{{ asset('Images/' . $logo) }}" class="h-16 max-w-[130px] w-auto object-contain"
-                                    style="filter: brightness(1.8) contrast(1.1);" alt="Logo">
+                            <div
+                                class="flex items-center justify-center min-w-[160px] min-h-[96px] overflow-hidden cursor-pointer group/logo">
+                                <img src="{{ asset('Images/' . $logo) }}"
+                                    class="h-16 max-w-[160px] w-auto object-contain transition-transform duration-[0.4s] ease-in-out group-hover/logo:scale-105 group-active/logo:scale-105"
+                                    alt="Logo">
                             </div>
                         @endforeach
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="how-it-works" class="py-24 bg-brand-black relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div
-                class="absolute top-[10%] left-[-5%] w-96 h-96 bg-brand-blue/10 rounded-full blur-[100px] opacity-30 animate-pulse">
-            </div>
-            <div class="absolute bottom-[10%] right-[-5%] w-96 h-96 bg-neon-pink/10 rounded-full blur-[100px] opacity-30 animate-pulse"
-                style="animation-delay: 2s;"></div>
-        </div>
+    <section id="how-it-works" class="py-24 bg-brand-purple relative overflow-hidden">
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20" data-aos="fade-up">
                 <span
-                    class="inline-block px-4 py-1.5 rounded-full border border-brand-blue/30 bg-brand-blue/10 text-brand-blue text-xs font-bold tracking-[0.2em] uppercase mb-6 shadow-[0_0_10px_rgba(0,255,255,0.2)]">
+                    class="inline-block px-4 py-1.5 rounded-full border border-brand-orange/30 bg-brand-orange/10 text-brand-orange text-xs font-bold tracking-wider uppercase mb-6">
                     The Process
                 </span>
-                <h2 class="text-3xl md:text-5xl font-black text-white tracking-wide font-display">
-                    How We Amplify <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-neon-pink text-glow">Your
-                        Presence</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-white tracking-tight">
+                    How We Amplify <span class="text-brand-orange">Your Presence</span>
                 </h2>
             </div>
 
             <div class="space-y-8 relative">
                 <!-- Vertical Line -->
-                <div
-                    class="absolute left-[28px] top-8 bottom-8 w-0.5 bg-gradient-to-b from-brand-blue/20 via-brand-blue/10 to-transparent hidden md:block">
+                <div class="absolute left-[28px] top-8 bottom-8 w-px bg-brand-white/10 hidden md:block">
                 </div>
 
                 <!-- Step 1 -->
@@ -440,24 +329,23 @@
                     data-aos="fade-up">
                     <div class="hidden md:flex flex-col items-center z-10">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-brand-dark border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl font-bold relative group-hover:scale-110 transition duration-500 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
+                            class="w-14 h-14 rounded-full bg-brand-white border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl font-bold relative group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-brand-white transition duration-500 shadow-lg">
                             01
-                            <div
-                                class="absolute inset-0 bg-brand-blue/20 rounded-2xl animate-ping opacity-0 group-hover:opacity-100 transition">
-                            </div>
                         </div>
                     </div>
-                    <div class="flex-1 glass-card rounded-3xl p-8 hover:border-neon-pink text-center md:text-left">
+                    <div
+                        class="flex-1 bg-brand-white rounded-2xl p-8 hover:border-brand-orange/20 border border-brand-purple/10 text-center md:text-left transition-all shadow-card hover:shadow-subtle">
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                            <div class="p-3 bg-brand-blue/10 rounded-xl text-brand-blue border border-brand-blue/20">
-                                <i class="fas fa-pen-fancy text-2xl drop-shadow-[0_0_5px_rgba(0,255,255,0.8)]"></i>
+                            <div
+                                class="p-3 bg-brand-orange/10 rounded-xl text-brand-orange border border-brand-orange/20">
+                                <i class="fas fa-pen-fancy text-2xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight font-display">
-                                    <span class="text-brand-blue">Prism</span> Writes and publishes your <span
-                                        class="text-neon-pink">Business
-                                        Content</span> on <span
-                                        class="text-white border-b border-brand-blue/50">Authority Platforms</span>.
+                                <h3 class="text-2xl md:text-3xl font-bold text-brand-purple mb-3 leading-tight">
+                                    <span class="text-brand-orange">Prism</span> Writes and publishes your <span
+                                        class="text-brand-purple">Business Content</span> on <span
+                                        class="text-brand-purple border-b border-brand-orange/30">Authority
+                                        Platforms</span>.
                                 </h3>
                             </div>
                         </div>
@@ -469,36 +357,34 @@
                     data-aos="fade-up" data-aos-delay="150">
                     <div class="hidden md:flex flex-col items-center z-10">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-brand-dark border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl font-bold relative group-hover:scale-110 transition duration-500 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
+                            class="w-14 h-14 rounded-full bg-brand-white border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl font-bold relative group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-brand-white transition duration-500 shadow-lg">
                             02
-                            <div
-                                class="absolute inset-0 bg-brand-blue/20 rounded-2xl animate-ping opacity-0 group-hover:opacity-100 transition">
-                            </div>
                         </div>
                     </div>
-                    <div class="flex-1 glass-card rounded-3xl p-8 hover:border-neon-pink text-center md:text-left">
+                    <div
+                        class="flex-1 bg-brand-white rounded-2xl p-8 hover:border-brand-orange/20 border border-brand-purple/10 text-center md:text-left transition-all shadow-card hover:shadow-subtle">
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                            <div class="p-3 bg-brand-blue/10 rounded-xl text-brand-blue border border-brand-blue/20">
-                                <i class="fas fa-search text-2xl drop-shadow-[0_0_5px_rgba(0,255,255,0.8)]"></i>
+                            <div
+                                class="p-3 bg-brand-orange/10 rounded-xl text-brand-orange border border-brand-orange/20">
+                                <i class="fas fa-search text-2xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight font-display">
-                                    Appears on <span class="text-white">Google</span>, <span
-                                        class="text-neon-pink">ChatGPT</span>, <span
-                                        class="text-brand-blue">DeepSeek</span> and other <span
-                                        class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-purple-500">AI
-                                        Engines</span>.
+                                <h3 class="text-2xl md:text-3xl font-bold text-brand-purple mb-3 leading-tight">
+                                    Appears on <span class="text-brand-purple">Google</span>, <span
+                                        class="text-brand-purple">ChatGPT</span>, <span
+                                        class="text-brand-orange">DeepSeek</span> and other <span
+                                        class="font-bold text-brand-purple">AI Engines</span>.
                                 </h3>
                                 <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
                                     <span
-                                        class="flex items-center gap-1 text-xs font-bold text-gray-300 bg-white/5 px-2 py-1 rounded-lg border border-white/10"><i
-                                            class="fab fa-google text-brand-blue"></i> Google News</span>
+                                        class="flex items-center gap-1 text-xs font-bold text-brand-purple/70 bg-brand-purple/5 px-3 py-1.5 rounded-md border border-brand-purple/10"><i
+                                            class="fab fa-google text-brand-orange"></i> Google News</span>
                                     <span
-                                        class="flex items-center gap-1 text-xs font-bold text-gray-300 bg-white/5 px-2 py-1 rounded-lg border border-white/10"><i
-                                            class="fas fa-robot text-neon-pink"></i> ChatGPT</span>
+                                        class="flex items-center gap-1 text-xs font-bold text-brand-purple/70 bg-brand-purple/5 px-3 py-1.5 rounded-md border border-brand-purple/10"><i
+                                            class="fas fa-robot text-brand-orange"></i> ChatGPT</span>
                                     <span
-                                        class="flex items-center gap-1 text-xs font-bold text-gray-300 bg-white/5 px-2 py-1 rounded-lg border border-white/10"><i
-                                            class="fas fa-brain text-purple-400"></i> Claude</span>
+                                        class="flex items-center gap-1 text-xs font-bold text-brand-purple/70 bg-brand-purple/5 px-3 py-1.5 rounded-md border border-brand-purple/10"><i
+                                            class="fas fa-brain text-brand-orange"></i> Claude</span>
                                 </div>
                             </div>
                         </div>
@@ -510,23 +396,22 @@
                     data-aos="fade-up" data-aos-delay="300">
                     <div class="hidden md:flex flex-col items-center z-10">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-brand-dark border border-brand-blue/30 flex items-center justify-center text-brand-blue text-xl font-bold relative group-hover:scale-110 transition duration-500 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
+                            class="w-14 h-14 rounded-full bg-brand-white border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl font-bold relative group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-brand-white transition duration-500 shadow-lg">
                             03
-                            <div
-                                class="absolute inset-0 bg-brand-blue/20 rounded-2xl animate-ping opacity-0 group-hover:opacity-100 transition">
-                            </div>
                         </div>
                     </div>
-                    <div class="flex-1 glass-card rounded-3xl p-8 hover:border-neon-pink text-center md:text-left">
+                    <div
+                        class="flex-1 bg-brand-white rounded-2xl p-8 hover:border-brand-orange/20 border border-brand-purple/10 text-center md:text-left transition-all shadow-card hover:shadow-subtle">
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                            <div class="p-3 bg-brand-blue/10 rounded-xl text-brand-blue border border-brand-blue/20">
-                                <i class="fas fa-rocket text-2xl drop-shadow-[0_0_5px_rgba(0,255,255,0.8)]"></i>
+                            <div
+                                class="p-3 bg-brand-orange/10 rounded-xl text-brand-orange border border-brand-orange/20">
+                                <i class="fas fa-rocket text-2xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight font-display">
-                                    Boosting your <span class="text-brand-blue text-glow">Domain Authority</span> and
+                                <h3 class="text-2xl md:text-3xl font-bold text-brand-purple mb-3 leading-tight">
+                                    Boosting your <span class="text-brand-orange">Domain Authority</span> and
                                     driving
-                                    <span class="text-white border-b border-brand-blue/50">Organic
+                                    <span class="text-brand-purple border-b border-brand-orange/30">Organic
                                         Traffic</span>
                                     while you sleep.
                                 </h3>
@@ -540,28 +425,26 @@
     </section>
 
     @include('partials.features_soro')
-    <section class="py-24 bg-[#05050a] relative overflow-hidden">
-        <!-- Radial Gradient Overlay -->
-        <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_right,_rgba(0,255,255,0.15)_0%,_transparent_70%)] pointer-events-none">
-        </div>
+    <section class="py-24 bg-brand-white relative overflow-hidden">
 
         <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16 relative z-10">
             <!-- Left Side: Text Content -->
             <div class="lg:w-1/2" data-aos="fade-right">
                 <div
-                    class="inline-block px-4 py-1.5 border border-brand-blue text-brand-blue bg-brand-blue/10 shadow-[0_0_10px_rgba(0,255,255,0.5)] rounded-full text-xs font-bold tracking-wide uppercase mb-6">
+                    class="inline-block px-4 py-1.5 border border-brand-orange/30 text-brand-orange bg-brand-orange/5 rounded-full text-xs font-bold tracking-wider uppercase mb-6">
                     COMPETITIVE ADVANTAGE</div>
-                <h3 class="text-3xl md:text-5xl font-extrabold text-white mb-6 font-display tracking-wide"
-                    style="text-shadow: 0 0 10px #00ffff;">PROPRIETARY "NEURAL SPLIT" ARCHITECTURE</h3>
-                <p class="text-lg text-gray-400 leading-relaxed mb-8">
+                <h3 class="text-3xl md:text-5xl font-bold text-brand-purple mb-6 tracking-tight">PROPRIETARY "NEURAL
+                    SPLIT"
+                    ARCHITECTURE</h3>
+                <p class="text-lg text-brand-purple/80 leading-relaxed mb-8">
                     Eliminate redundancy penalties. Our system generates unique cryptographic variations of your
                     narrative for every outlet, ensuring 100% search engine indexation and unique value attribution.
                 </p>
-                <div class="p-6 rounded-xl border-l-4 border-neon-pink backdrop-blur-md relative overflow-hidden"
-                    style="background: rgba(255, 0, 255, 0.05); box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);">
-                    <p class="font-bold text-white shadow-[0_0_5px_rgba(255,0,255,0.5)]">100% Satisfaction Guarantee</p>
-                    <p class="text-gray-300 mt-1">If your article isn't published, you get a full refund. Zero risk.
+                <div
+                    class="p-6 rounded-xl border-l-4 border-brand-orange bg-brand-purple/5 relative overflow-hidden shadow-sm">
+                    <p class="font-bold text-brand-purple">100% Satisfaction Guarantee</p>
+                    <p class="text-brand-purple/70 mt-1">If your article isn't published, you get a full refund. Zero
+                        risk.
                     </p>
                 </div>
             </div>
@@ -570,30 +453,30 @@
             <div class="lg:w-1/2" data-aos="fade-left">
                 <div class="flex gap-4">
                     <div
-                        class="w-1/2 bg-brand-black/50 p-2 rounded-2xl border border-brand-blue/30 shadow-[0_0_30px_rgba(0,255,255,0.3)] -rotate-1 hover:rotate-0 transition duration-500 backdrop-blur-sm group hover:scale-105">
+                        class="w-1/2 bg-brand-white p-2 rounded-2xl border border-brand-purple/10 shadow-card -rotate-1 hover:rotate-0 transition duration-500 group hover:scale-105">
                         <img src="{{ asset('Images/trader110_mockup.jpg') }}" alt="Trader110 Mockup"
-                            class="rounded-xl w-full h-full object-cover">
+                            class="rounded-xl w-full h-full object-cover transition duration-500">
                     </div>
                     <div
-                        class="w-1/2 bg-brand-black/50 p-2 rounded-2xl border border-brand-blue/30 shadow-[0_0_30px_rgba(0,255,255,0.3)] rotate-1 hover:rotate-0 transition duration-500 backdrop-blur-sm group hover:scale-105">
+                        class="w-1/2 bg-brand-white p-2 rounded-2xl border border-brand-purple/10 shadow-card rotate-1 hover:rotate-0 transition duration-500 group hover:scale-105">
                         <img src="{{ asset('Images/invest70_mockup.png') }}" alt="Invest70 Mockup"
-                            class="rounded-xl w-full h-full object-cover">
+                            class="rounded-xl w-full h-full object-cover transition duration-500">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="why-choose" class="py-24 bg-brand-black text-white relative border-t border-brand-blue/10">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
-        </div>
+    <section id="why-choose" class="py-24 bg-brand-purple text-brand-white relative border-t border-brand-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20" data-aos="fade-up">
-                <h2 class="text-4xl font-black sm:text-5xl font-display tracking-widest uppercase text-glow">Why Choose
-                    <span class="text-brand-blue">Prism</span>?
+                <h2 class="text-4xl font-bold sm:text-5xl tracking-tight text-brand-white">Why Choose
+                    <span class="text-brand-orange">Prism</span>?
                 </h2>
-                <p class="mt-4 text-xl text-gray-400 font-light tracking-wide">Optimized for <span
-                        class="text-white">Google Rankings (SEO)</span> and <span class="text-white">AI Visibility
+                <p class="mt-4 text-xl text-brand-white/80 font-normal tracking-wide">Optimized for <span
+                        class="text-brand-white font-bold">Google Rankings (SEO)</span> and <span
+                        class="text-brand-white font-bold">AI
+                        Visibility
                         (GEO)</span>.</p>
             </div>
 
@@ -601,16 +484,16 @@
                 <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="0">
                     <div class="flex-shrink-0">
                         <div
-                            class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center border border-brand-blue/30 text-brand-blue text-2xl shadow-[0_0_10px_rgba(0,255,255,0.2)] group-hover:bg-brand-blue group-hover:text-brand-black transition-all duration-300">
+                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
                             <i class="fas fa-chart-line"></i>
                         </div>
                     </div>
                     <div>
                         <h4
-                            class="text-xl font-bold mb-2 font-display uppercase tracking-wider text-white group-hover:text-brand-blue transition-colors">
+                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
                             SEO & GEO Experts</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Rank on Google and get cited by AI
-                            (ChatGPT/Perplexity) through our <strong class="text-neon-pink">Generative Engine
+                        <p class="text-brand-white/70 text-sm leading-relaxed">Rank on Google and get cited by AI
+                            (ChatGPT/Perplexity) through our <strong class="text-brand-white">Generative Engine
                                 Optimization</strong> strategies.
                         </p>
                     </div>
@@ -619,15 +502,16 @@
                 <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex-shrink-0">
                         <div
-                            class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center border border-brand-blue/30 text-brand-blue text-2xl shadow-[0_0_10px_rgba(0,255,255,0.2)] group-hover:bg-brand-blue group-hover:text-brand-black transition-all duration-300">
+                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                     </div>
                     <div>
                         <h4
-                            class="text-xl font-bold mb-2 font-display uppercase tracking-wider text-white group-hover:text-brand-blue transition-colors">
+                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
                             High DA Outlets</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">We publish on sites with high Domain Authority
+                        <p class="text-brand-white/70 text-sm leading-relaxed">We publish on sites with high Domain
+                            Authority
                             (DA), ensuring valuable backlinks that boost your site's reputation.</p>
                     </div>
                 </div>
@@ -635,15 +519,16 @@
                 <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex-shrink-0">
                         <div
-                            class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center border border-brand-blue/30 text-brand-blue text-2xl shadow-[0_0_10px_rgba(0,255,255,0.2)] group-hover:bg-brand-blue group-hover:text-brand-black transition-all duration-300">
+                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
                             <i class="fas fa-pen-nib"></i>
                         </div>
                     </div>
                     <div>
                         <h4
-                            class="text-xl font-bold mb-2 font-display uppercase tracking-wider text-white group-hover:text-brand-blue transition-colors">
+                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
                             Professional PR Writing</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Our team crafts SEO-optimized news stories
+                        <p class="text-brand-white/70 text-sm leading-relaxed">Our team crafts SEO-optimized news
+                            stories
                             designed to drive interest, engagement, and click-throughs.</p>
                     </div>
                 </div>
@@ -651,15 +536,16 @@
                 <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex-shrink-0">
                         <div
-                            class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center border border-brand-blue/30 text-brand-blue text-2xl shadow-[0_0_10px_rgba(0,255,255,0.2)] group-hover:bg-brand-blue group-hover:text-brand-black transition-all duration-300">
+                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
                             <i class="fas fa-certificate"></i>
                         </div>
                     </div>
                     <div>
                         <h4
-                            class="text-xl font-bold mb-2 font-display uppercase tracking-wider text-white group-hover:text-brand-blue transition-colors">
+                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
                             "As Seen On" Trust Badge</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Build instant trust and conversion rates on
+                        <p class="text-brand-white/70 text-sm leading-relaxed">Build instant trust and conversion
+                            rates on
                             your website by displaying our authorized media badges.</p>
                     </div>
                 </div>
@@ -667,15 +553,16 @@
                 <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex-shrink-0">
                         <div
-                            class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center border border-brand-blue/30 text-brand-blue text-2xl shadow-[0_0_10px_rgba(0,255,255,0.2)] group-hover:bg-brand-blue group-hover:text-brand-black transition-all duration-300">
+                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
                             <i class="fas fa-headset"></i>
                         </div>
                     </div>
                     <div>
                         <h4
-                            class="text-xl font-bold mb-2 font-display uppercase tracking-wider text-white group-hover:text-brand-blue transition-colors">
+                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
                             Helpful Support</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">50+ Support Guides and Priority Live Chat
+                        <p class="text-brand-white/70 text-sm leading-relaxed">50+ Support Guides and Priority Live
+                            Chat
                             support to help you manage your brand's reputation.</p>
                     </div>
                 </div>
@@ -683,15 +570,16 @@
                 <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="500">
                     <div class="flex-shrink-0">
                         <div
-                            class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center border border-brand-blue/30 text-brand-blue text-2xl shadow-[0_0_10px_rgba(0,255,255,0.2)] group-hover:bg-brand-blue group-hover:text-brand-black transition-all duration-300">
+                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
                             <i class="fas fa-file-alt"></i>
                         </div>
                     </div>
                     <div>
                         <h4
-                            class="text-xl font-bold mb-2 font-display uppercase tracking-wider text-white group-hover:text-brand-blue transition-colors">
+                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
                             White Label Reports</h4>
-                        <p class="text-gray-400 text-sm leading-relaxed">Perfect for agencies. Get unbranded reports
+                        <p class="text-brand-white/70 text-sm leading-relaxed">Perfect for agencies. Get unbranded
+                            reports
                             with all live backlinks to share directly with your clients.</p>
                     </div>
                 </div>

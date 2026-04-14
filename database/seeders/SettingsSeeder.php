@@ -14,6 +14,7 @@ class SettingsSeeder extends Seeder
             ['key' => 'price_growth', 'value' => '2380'],
             ['key' => 'price_authority', 'value' => '3980'],
             ['key' => 'price_ultimate', 'value' => '4980'],
+            ['key' => 'design_preset', 'value' => 'Updated Custom'],
         ];
 
         foreach ($settings as $setting) {

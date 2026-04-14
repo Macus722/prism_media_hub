@@ -14,10 +14,12 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-black': '#050505',
-                        'brand-dark': '#111111',
-                        'brand-red': '#FF2D46',
-                        'brand-red-hover': '#d91b32',
+                        'brand-black': '#f9fafb',
+                        'brand-dark': '#ffffff',
+                        'brand-red': '#f97316',
+                        'brand-red-hover': '#ea580c',
+                        'brand-gray': '#e5e7eb',
+                        'brand-white': '#111827',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif']
@@ -33,18 +35,18 @@
     </style>
 </head>
 
-<body class="bg-brand-black text-white min-h-screen py-10 px-4">
+<body class="bg-slate-50 text-brand-white min-h-screen py-10 px-4">
 
     <div class="max-w-2xl mx-auto">
         <!-- Header -->
         <div class="mb-8 flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Edit Order</h1>
-            <a href="{{ url('admin') }}" class="text-gray-400 hover:text-white transition"><i
+            <h1 class="text-3xl font-bold text-gray-900">Edit Order</h1>
+            <a href="{{ url('admin') }}" class="text-gray-500 hover:text-gray-900 transition"><i
                     class="fas fa-arrow-left mr-2"></i>
                 Back to Dashboard</a>
         </div>
 
-        <div class="bg-brand-dark border border-white/10 rounded-2xl p-8 shadow-2xl">
+        <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-2xl shadow-gray-200/50">
             <form method="POST" action="{{ url('admin/update', $order->id) }}">
                 @csrf
                 <input type="hidden" name="order_id" value="{{ $order->id }}">
@@ -54,19 +56,19 @@
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Customer Name</label>
                         <input type="text" name="customer_name" value="{{ $order->customer_name }}" required
-                            class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition">
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-red transition">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Email</label>
                         <input type="email" name="customer_email" value="{{ $order->customer_email }}" required
-                            class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition">
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-red transition">
                     </div>
                 </div>
 
                 <div class="mb-6">
                     <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Phone</label>
                     <input type="text" name="phone" value="{{ $order->phone }}" required
-                        class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition">
+                        class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-red transition">
                 </div>
 
                 <!-- Company Details -->
@@ -74,12 +76,12 @@
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Company Name</label>
                         <input type="text" name="company_name" value="{{ $order->company_name }}"
-                            class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition">
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-red transition">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Website URL</label>
                         <input type="text" name="website_url" value="{{ $order->website_url }}"
-                            class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition">
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-red transition">
                     </div>
                 </div>
 
@@ -88,7 +90,7 @@
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Plan</label>
                         <select name="plan"
-                            class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition">
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-red transition">
                             <option value="access" {{ strtolower($order->plan) == 'access' ? 'selected' : '' }}>Access
                                 Plan</option>
                             <option value="growth" {{ strtolower($order->plan) == 'growth' ? 'selected' : '' }}>Growth
@@ -100,7 +102,7 @@
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Strategy</label>
                         <select name="strategy"
-                            class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition">
+                            class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-red transition">
                             <option value="conservative" {{ strtolower($order->strategy) == 'conservative' ? 'selected' : '' }}>Conservative
                             </option>
                             <option value="balanced" {{ strtolower($order->strategy) == 'balanced' ? 'selected' : '' }}>
@@ -116,17 +118,17 @@
                 <div class="mb-8">
                     <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Total Amount (RM)</label>
                     <input type="number" step="0.01" name="total_amount" value="{{ $order->total_amount }}" required
-                        class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition">
+                        class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:border-brand-red transition">
                 </div>
 
                 <!-- Actions -->
                 <div class="flex gap-4">
                     <button type="submit"
-                        class="flex-1 bg-brand-red hover:bg-brand-red-hover text-white font-bold py-3 rounded-lg transition shadow-lg hover:shadow-red-900/40">
+                        class="flex-1 bg-brand-red hover:bg-brand-red-hover text-white font-bold py-3 rounded-lg transition shadow-lg hover:shadow-orange-500/40">
                         Update Order
                     </button>
                     <a href="{{ url('admin') }}"
-                        class="flex-1 bg-transparent border border-white/10 hover:border-white/30 text-white font-bold py-3 rounded-lg transition text-center">
+                        class="flex-1 bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 font-bold py-3 rounded-lg transition text-center">
                         Cancel
                     </a>
                 </div>

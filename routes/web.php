@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('index');
 });
 
+// Checkout / Order
 Route::get('/checkout', function () {
     return view('order');
 });
@@ -62,3 +63,8 @@ Route::get('/admin/edit/{id}', [App\Http\Controllers\AdminController::class, 'ed
 Route::post('/admin/update/{id}', [App\Http\Controllers\AdminController::class, 'update']);
 Route::post('/admin/batch', [App\Http\Controllers\AdminController::class, 'batchUpdate']);
 Route::get('/admin/api/updates', [App\Http\Controllers\AdminController::class, 'getLatestUpdates']);
+
+// White Label Network Receiver Routes
+Route::get('/system/auth/impersonate/{token}', [\App\Http\Controllers\NetworkController::class, 'impersonate'])
+    ->name('network.impersonate')
+    ->middleware('signed');

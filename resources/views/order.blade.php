@@ -19,20 +19,18 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-black': '#05050a',
-                        'brand-dark': '#0a0a12',
-                        'brand-red': '#FF2D46', /* Keeping red for alerts/actions if needed, or switching to Pink */
-                        'neon-pink': '#ff00ff',
-                        'brand-blue': '#00ffff',
-                        'glass-bg': 'rgba(15, 15, 25, 0.7)',
+                        'brand-purple': '#221A31',
+                        'brand-orange': '#f97316',
+                        'brand-white': '#ffffff',
+                        'glass-bg': 'rgba(34, 26, 49, 0.92)',
                     },
                     fontFamily: {
                         sans: ['Rajdhani', 'sans-serif'],
                         display: ['Orbitron', 'sans-serif'],
                     },
                     boxShadow: {
-                        'neon-pink': '0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3)',
-                        'neon-blue': '0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3)',
+                        'brand-orange': '0 14px 35px rgba(15, 23, 42, 0.12)',
+                        'neon-blue': '0 14px 35px rgba(15, 23, 42, 0.08)',
                     },
                     animation: {
                         'scroll': 'scroll 40s linear infinite',
@@ -55,12 +53,9 @@
     <style>
         body {
             font-family: 'Rajdhani', sans-serif;
-            background-color: #05050a;
-            color: #d1d5db;
-            background-image:
-                linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
+            background-color: #221A31;
+            color: #f9fafb;
+            background-image: none;
         }
 
         h1,
@@ -79,16 +74,16 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #05050a;
+            background: #221A31;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #333;
+            background: #362B4D;
             border-radius: 5px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #FF2D46;
+            background: #4B3C69;
         }
 
         /* Form Logic Styles */
@@ -115,22 +110,22 @@
         .radio-card.selected,
         .plan-card.selected,
         .strategy-card.selected {
-            border-color: #ff00ff;
-            background-color: rgba(255, 0, 255, 0.05);
-            box-shadow: 0 0 15px rgba(255, 0, 255, 0.2), inset 0 0 10px rgba(255, 0, 255, 0.1);
+            border-color: #f97316;
+            background-color: rgba(249, 115, 22, 0.05);
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.2), inset 0 0 10px rgba(249, 115, 22, 0.1);
         }
 
         .radio-card:hover,
         .plan-card:hover,
         .strategy-card:hover {
-            border-color: #00ffff;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+            border-color: #f97316;
+            box-shadow: 0 0 10px rgba(249, 115, 22, 0.2);
         }
 
         .glass-panel {
-            background: rgba(15, 15, 25, 0.7);
+            background: rgba(34, 26, 49, 0.7);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         @keyframes fadeIn {
@@ -167,23 +162,34 @@
             visibility: visible;
             pointer-events: auto;
         }
+
+        /* Context-Aware Logo Rendering */
+        .brand-logo {
+            mix-blend-mode: screen !important;
+        }
+
+        .bg-brand-white .brand-logo,
+        .bg-white .brand-logo {
+            mix-blend-mode: normal !important;
+            filter: brightness(0) invert(13%) sepia(18%) saturate(1518%) hue-rotate(216deg) brightness(92%) contrast(91%) !important;
+        }
     </style>
 </head>
 
-<body class="antialiased selection:bg-neon-pink selection:text-white pb-32">
+<body class="antialiased selection:bg-brand-orange selection:text-brand-white pb-32 bg-brand-purple text-brand-white">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300 border-b border-white/5 bg-brand-black/80 backdrop-blur-md"
+    <nav class="fixed w-full z-50 transition-all duration-300 border-b border-brand-white/10 bg-brand-purple/90 backdrop-blur-md"
         id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 <div class="flex-shrink-0 flex items-center cursor-pointer">
-                    <img src="{{ asset('Images/prism_logo_v2.png') }}" alt="Prism Media Hub"
-                        class="h-20 w-auto object-contain">
+                    <img src="{{ asset('Images/prism_media_logo_FA-02.png') }}" alt="Prism Media Hub"
+                        class="brand-logo bg-transparent h-32 w-auto object-contain">
                 </div>
                 <div class="hidden md:block">
                     <a href="{{ url('/') }}"
-                        class="text-sm font-semibold text-white/80 hover:text-white border border-white/10 hover:border-white/30 rounded-full px-5 py-2 transition-all flex items-center gap-2">
+                        class="text-sm font-semibold text-brand-white/80 hover:text-brand-white border border-white/10 hover:border-white/30 rounded-full px-5 py-2 transition-all flex items-center gap-2">
                         <i class="fas fa-arrow-left"></i> Back to Home
                     </a>
                 </div>
@@ -197,16 +203,18 @@
         <div class="absolute inset-0"
             style="background-image: radial-gradient(#333 1px, transparent 1px); background-size: 40px 40px; opacity: 0.1;">
         </div>
-        <div class="absolute top-[10%] right-[0%] w-[500px] h-[500px] bg-brand-red/10 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-blue-600/5 rounded-full blur-[100px]">
+        <div class="absolute top-[10%] right-[0%] w-[500px] h-[500px] bg-brand-orange/10 rounded-full blur-[120px]">
+        </div>
+        <div class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-brand-white/5 rounded-full blur-[100px]">
         </div>
     </div>
 
     <!-- Custom Order Wizard Section -->
-    <section id="order-wizard" class="pt-48 pb-24 bg-brand-black border-t border-white/10 relative overflow-hidden">
+    <section id="order-wizard" class="pt-48 pb-24 bg-brand-purple border-t border-white/10 relative overflow-hidden">
         <!-- Background Decor -->
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div class="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-brand-red/5 rounded-full blur-[120px]">
+            <div
+                class="absolute top-[20%] right-[-10%] w-[600px] h-[600px] bg-brand-orange/5 rounded-full blur-[120px]">
             </div>
             <div class="absolute bottom-[10%] left-[-10%] w-[400px] h-[400px] bg-blue-900/10 rounded-full blur-[100px]">
             </div>
@@ -214,8 +222,9 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Customize Your Media Campaign</h2>
-                <p class="text-xl text-gray-500 max-w-2xl mx-auto">Select your plan, content strategy, and distribution
+                <h2 class="text-4xl md:text-5xl font-extrabold text-brand-white mb-6">Customize Your Media Campaign</h2>
+                <p class="text-xl text-brand-white/70 max-w-2xl mx-auto">Select your plan, content strategy, and
+                    distribution
                     reach.</p>
             </div>
 
@@ -228,9 +237,9 @@
                     <div class="wizard-step">
                         <div class="flex items-center gap-4 mb-8">
                             <span
-                                class="bg-brand-red/10 text-brand-red px-3 py-1 rounded-lg text-xs font-bold tracking-wider">STEP
+                                class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-lg text-xs font-bold tracking-wider">STEP
                                 1</span>
-                            <h3 class="text-2xl font-bold text-white">Choose Your Plan</h3>
+                            <h3 class="text-2xl font-bold text-brand-white">Choose Your Plan</h3>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             <!-- Access Plan -->
@@ -238,21 +247,22 @@
                                 data-plan="access" data-price="1980" onclick="selectCard(this, 'plan')">
                                 <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition skew-y-6">📄
                                 </div>
-                                <div class="text-lg font-bold text-white mb-1 group-hover:text-brand-blue">Access</div>
-                                <div class="text-sm text-gray-500 mb-4">1 Guaranteed Outlet</div>
-                                <div class="text-xl font-bold text-white group-hover:text-shadow-blue">$1980</div>
+                                <div class="text-lg font-bold text-brand-white mb-1 group-hover:text-brand-orange">
+                                    Access</div>
+                                <div class="text-sm text-brand-white/70 mb-4">1 Guaranteed Outlet</div>
+                                <div class="text-xl font-bold text-brand-white group-hover:text-shadow-blue">$1980</div>
                             </div>
 
                             <!-- Growth Plan -->
                             <div class="plan-card selected glass-panel rounded-2xl p-6 cursor-pointer transition-all group"
                                 data-plan="growth" data-price="2380" onclick="selectCard(this, 'plan')">
                                 <div
-                                    class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-neon-pink text-white text-[10px] font-bold px-3 py-1 rounded-sm z-10 tracking-widest uppercase shadow-[0_0_10px_#ff00ff]">
+                                    class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-orange text-brand-white text-[10px] font-bold px-3 py-1 rounded-sm z-10 tracking-widest uppercase shadow-[0_0_10px_#f97316]">
                                     Most Popular</div>
                                 <div class="text-4xl mb-4 animate-pulse">🚀</div>
-                                <div class="text-lg font-bold text-white mb-1">Growth</div>
-                                <div class="text-sm text-gray-300 mb-4">5 Guaranteed Outlets</div>
-                                <div class="text-xl font-bold text-neon-pink text-glow-pink">$2380</div>
+                                <div class="text-lg font-bold text-brand-white mb-1">Growth</div>
+                                <div class="text-sm text-brand-white/80 mb-4">5 Guaranteed Outlets</div>
+                                <div class="text-xl font-bold text-brand-orange ">$2380</div>
                             </div>
 
                             <!-- Authority Plan -->
@@ -260,10 +270,11 @@
                                 data-plan="authority" data-price="3980" onclick="selectCard(this, 'plan')">
                                 <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition skew-y-6">👑
                                 </div>
-                                <div class="text-lg font-bold text-white mb-1 group-hover:text-brand-blue">Authority
+                                <div class="text-lg font-bold text-brand-white mb-1 group-hover:text-brand-orange">
+                                    Authority
                                 </div>
-                                <div class="text-sm text-gray-500 mb-4">10 Guaranteed Outlets</div>
-                                <div class="text-xl font-bold text-white group-hover:text-shadow-blue">$3980</div>
+                                <div class="text-sm text-brand-white/70 mb-4">10 Guaranteed Outlets</div>
+                                <div class="text-xl font-bold text-brand-white group-hover:text-shadow-blue">$3980</div>
                             </div>
 
                             <!-- Ultimate Plan -->
@@ -271,10 +282,11 @@
                                 data-plan="ultimate" data-price="4980" onclick="selectCard(this, 'plan')">
                                 <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition skew-y-6">💎
                                 </div>
-                                <div class="text-lg font-bold text-white mb-1 group-hover:text-brand-blue">Ultimate
+                                <div class="text-lg font-bold text-brand-white mb-1 group-hover:text-brand-orange">
+                                    Ultimate
                                 </div>
-                                <div class="text-sm text-gray-500 mb-4">20 Guaranteed Outlets</div>
-                                <div class="text-xl font-bold text-white group-hover:text-shadow-blue">$4980</div>
+                                <div class="text-sm text-brand-white/70 mb-4">20 Guaranteed Outlets</div>
+                                <div class="text-xl font-bold text-brand-white group-hover:text-shadow-blue">$4980</div>
                             </div>
                         </div>
                     </div>
@@ -283,43 +295,43 @@
                     <div class="wizard-step">
                         <div class="flex items-center gap-4 mb-8">
                             <span
-                                class="bg-brand-red/10 text-brand-red px-3 py-1 rounded-lg text-xs font-bold tracking-wider">STEP
+                                class="bg-brand-orange/10 text-brand-orange px-3 py-1 rounded-lg text-xs font-bold tracking-wider">STEP
                                 2</span>
-                            <h3 class="text-2xl font-bold text-white">Select Content Strategy</h3>
+                            <h3 class="text-2xl font-bold text-brand-white">Select Content Strategy</h3>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <!-- Self-Provide -->
                             <div class="strategy-card glass-panel rounded-2xl p-6 cursor-pointer transition-all group flex flex-col h-full"
                                 data-strategy="self" data-price="0" onclick="selectCard(this, 'strategy')">
                                 <div
-                                    class="font-bold text-white mb-2 flex items-center gap-2 group-hover:text-brand-blue">
+                                    class="font-bold text-brand-white mb-2 flex items-center gap-2 group-hover:text-brand-orange">
                                     📤 Self-Provide</div>
-                                <p class="text-sm text-gray-500 mb-6 flex-1">Upload your own content. Basic review
+                                <p class="text-sm text-brand-white/70 mb-6 flex-1">Upload your own content. Basic review
                                     included.</p>
-                                <div class="font-bold text-white mt-auto">Free</div>
+                                <div class="font-bold text-brand-white mt-auto">Free</div>
                             </div>
 
                             <!-- AI-Assisted -->
                             <div class="strategy-card glass-panel rounded-2xl p-6 cursor-pointer transition-all group flex flex-col h-full"
                                 data-strategy="ai" data-price="100" onclick="selectCard(this, 'strategy')">
                                 <div
-                                    class="font-bold text-white mb-2 flex items-center gap-2 group-hover:text-brand-blue">
+                                    class="font-bold text-brand-white mb-2 flex items-center gap-2 group-hover:text-brand-orange">
                                     🤖 AI-Assisted</div>
-                                <p class="text-sm text-gray-500 mb-6 flex-1">Generate content using AI. Quick &
+                                <p class="text-sm text-brand-white/70 mb-6 flex-1">Generate content using AI. Quick &
                                     efficient.</p>
-                                <div class="font-bold text-white mt-auto">RM 100</div>
+                                <div class="font-bold text-brand-white mt-auto">RM 100</div>
                             </div>
 
                             <!-- Pro Copywriting -->
                             <div class="strategy-card selected glass-panel rounded-2xl p-6 cursor-pointer transition-all group flex flex-col h-full"
                                 data-strategy="pro" data-price="200" onclick="selectCard(this, 'strategy')">
-                                <div class="font-bold text-white mb-2 flex items-center justify-between">
-                                    <span class="text-neon-pink">✒️ Pro Copywriting</span>
-                                    <i class="fas fa-check-circle text-neon-pink"></i>
+                                <div class="font-bold text-brand-white mb-2 flex items-center justify-between">
+                                    <span class="text-brand-orange">✒️ Pro Copywriting</span>
+                                    <i class="fas fa-check-circle text-brand-orange"></i>
                                 </div>
-                                <p class="text-sm text-gray-300 mb-6 flex-1">Professional writers create engaging
+                                <p class="text-sm text-brand-white/80 mb-6 flex-1">Professional writers create engaging
                                     content.</p>
-                                <div class="font-bold text-neon-pink mt-auto text-glow-pink">RM 200</div>
+                                <div class="font-bold text-brand-orange mt-auto ">RM 200</div>
                             </div>
                         </div>
                     </div>
@@ -331,40 +343,42 @@
                 <!-- Sticky Order Summary -->
                 <div class="lg:col-span-1">
                     <div class="sticky top-28 glass-panel rounded-2xl p-8 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-                        <div class="font-bold text-xl text-white mb-6 border-b border-brand-blue/20 pb-4 font-display">
+                        <div
+                            class="font-bold text-xl text-brand-white mb-6 border-b border-brand-orange/20 pb-4 font-display">
                             Order Summary</div>
 
                         <div class="flex justify-between text-sm mb-4">
-                            <span class="text-gray-300" id="summary-plan-name">Growth Package</span>
-                            <strong class="text-white">RM <span id="summary-plan-price">2380</span></strong>
+                            <span class="text-brand-white/80" id="summary-plan-name">Growth Package</span>
+                            <strong class="text-brand-white">RM <span id="summary-plan-price">2380</span></strong>
                         </div>
                         <div class="flex justify-between text-sm mb-4">
-                            <span class="text-gray-300" id="summary-strategy-name">Pro Copywriting</span>
-                            <strong class="text-white">RM <span id="summary-strategy-price">200</span></strong>
+                            <span class="text-brand-white/80" id="summary-strategy-name">Pro Copywriting</span>
+                            <strong class="text-brand-white">RM <span id="summary-strategy-price">200</span></strong>
                         </div>
 
 
 
-                        <div class="flex justify-between text-sm mb-6 pb-4 border-b border-brand-blue/20">
-                            <span class="text-gray-400">Subtotal</span>
-                            <span class="text-gray-400">RM <span id="summary-subtotal">3200</span></span>
+                        <div class="flex justify-between text-sm mb-6 pb-4 border-b border-brand-orange/20">
+                            <span class="text-brand-white/70">Subtotal</span>
+                            <span class="text-brand-white/70">RM <span id="summary-subtotal">3200</span></span>
                         </div>
 
                         <div class="flex justify-between items-center mb-8">
-                            <span class="text-lg font-bold text-white">Total</span>
-                            <span class="text-3xl font-black text-neon-pink text-glow-pink">RM <span
+                            <span class="text-lg font-bold text-brand-white">Total</span>
+                            <span class="text-3xl font-black text-brand-orange ">RM <span
                                     id="summary-total">3580</span></span>
                         </div>
 
                         <button onclick="openModal()"
-                            class="w-full py-4 bg-brand-blue hover:bg-white text-brand-black hover:text-neon-pink font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(0,255,255,0.4)] hover:shadow-[0_0_30px_rgba(255,0,255,0.6)] text-lg flex items-center justify-center gap-2 font-display uppercase tracking-wider relative overflow-hidden group">
+                            class="w-full py-4 bg-brand-orange hover:bg-white text-brand-purple hover:text-brand-orange font-bold rounded-lg transition-all shadow-md hover:shadow-lg text-lg flex items-center justify-center gap-2 font-display uppercase tracking-wider relative overflow-hidden group">
                             <div
                                 class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12">
                             </div>
                             <i class="fas fa-lock text-sm"></i> Checkout Now
                         </button>
 
-                        <div class="text-center mt-4 flex items-center justify-center gap-2 text-[10px] text-gray-500">
+                        <div
+                            class="text-center mt-4 flex items-center justify-center gap-2 text-[10px] text-brand-white/70">
                             <i class="fas fa-shield-alt"></i> Secure 256-bit SSL encryption. Money-back guarantee.
                         </div>
                     </div>
@@ -375,22 +389,22 @@
 
     <!-- Footer -->
     <!-- Footer -->
-    <footer class="bg-brand-black text-white pt-20 pb-12 border-t border-[rgba(0,255,255,0.3)]">
+    <footer class="bg-[#221A31] text-brand-white pt-20 pb-12 border-t border-brand-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <!-- Brief Footer Content -->
                 <div class="col-span-1 md:col-span-1">
                     <div class="mb-6">
-                        <img src="{{ asset('Images/prism_logo_v2.png') }}" alt="Prism Media Hub"
-                            class="h-20 w-auto object-contain">
+                        <img src="{{ asset('Images/prism_media_logo_FA-02.png') }}" alt="Prism Media Hub"
+                            class="brand-logo bg-transparent h-20 w-auto object-contain">
                     </div>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6 font-light">Automated press release
+                    <p class="text-brand-white/70 text-sm leading-relaxed mb-6 font-light">Automated press release
                         distribution for SEO
                         growth.</p>
                 </div>
             </div>
             <div
-                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-brand-white/70">
                 <div class="mb-4 md:mb-0 tracking-widest font-light text-xs uppercase">&copy; 2026 Prism Media Hub. All
                     rights reserved.</div>
             </div>
@@ -405,11 +419,11 @@
 
         <!-- Modal Content -->
         <div
-            class="relative bg-brand-dark border border-white/10 rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden transform transition-all">
+            class="relative bg-brand-purple border border-brand-white/10 rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden transform transition-all">
             <div class="p-8">
                 <div class="flex justify-between items-center mb-6">
-                    <h3 class="text-2xl font-bold text-white">Final Step: Create Profile</h3>
-                    <button onclick="closeModal()" class="text-gray-400 hover:text-white transition"><i
+                    <h3 class="text-2xl font-bold text-brand-white">Final Step: Create Profile</h3>
+                    <button onclick="closeModal()" class="text-brand-white/70 hover:text-brand-white transition"><i
                             class="fas fa-times text-xl"></i></button>
                 </div>
 
@@ -418,52 +432,55 @@
                     <!-- Hidden Inputs for Logic -->
                     <input type="hidden" name="plan" id="input-plan" value="growth">
                     <input type="hidden" name="strategy" id="input-strategy" value="pro">
+                    <input type="hidden" name="distribution" id="input-distribution" value="5">
 
 
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Full Name</label>
+                            <label class="block text-xs font-bold text-brand-white/70 uppercase mb-2">Full Name</label>
                             <input type="text" name="name" required
-                                class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition"
+                                class="w-full bg-brand-purple border border-white/10 rounded-lg px-4 py-3 text-brand-white focus:outline-none focus:border-brand-orange transition"
                                 placeholder="Enter your full name">
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Email Address</label>
+                            <label class="block text-xs font-bold text-brand-white/70 uppercase mb-2">Email
+                                Address</label>
                             <input type="email" name="email" required
-                                class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition"
+                                class="w-full bg-brand-purple border border-white/10 rounded-lg px-4 py-3 text-brand-white focus:outline-none focus:border-brand-orange transition"
                                 placeholder="name@example.com">
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 gap-4">
                         <div>
-                            <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Phone Number</label>
+                            <label class="block text-xs font-bold text-brand-white/70 uppercase mb-2">Phone
+                                Number</label>
                             <input type="tel" name="phone" required
-                                class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition"
+                                class="w-full bg-brand-purple border border-white/10 rounded-lg px-4 py-3 text-brand-white focus:outline-none focus:border-brand-orange transition"
                                 placeholder="+60...">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Company Name</label>
+                        <label class="block text-xs font-bold text-brand-white/70 uppercase mb-2">Company Name</label>
                         <input type="text" name="company"
-                            class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition"
+                            class="w-full bg-brand-purple border border-white/10 rounded-lg px-4 py-3 text-brand-white focus:outline-none focus:border-brand-orange transition"
                             placeholder="Your Company Name">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Website URL</label>
+                        <label class="block text-xs font-bold text-brand-white/70 uppercase mb-2">Website URL</label>
                         <input type="url" name="website"
-                            class="w-full bg-brand-black border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-red transition"
+                            class="w-full bg-brand-purple border border-white/10 rounded-lg px-4 py-3 text-brand-white focus:outline-none focus:border-brand-orange transition"
                             placeholder="https://yourwebsite.com">
                     </div>
 
                     <button type="submit"
-                        class="w-full mt-4 py-4 bg-brand-red hover:bg-brand-red-hover text-white font-bold rounded-lg transition-all shadow-lg hover:shadow-red-900/40 text-lg flex items-center justify-center gap-2">
+                        class="w-full mt-4 py-4 bg-brand-orange hover:bg-brand-orange-hover text-brand-white font-bold rounded-lg transition-all shadow-lg hover:shadow-red-900/40 text-lg flex items-center justify-center gap-2">
                         Proceed to Payment <i class="fas fa-arrow-right text-sm"></i>
                     </button>
 
-                    <p class="text-center text-[10px] text-gray-500 mt-2">By clicking, you agree to our Terms of
+                    <p class="text-center text-[10px] text-brand-white/70 mt-2">By clicking, you agree to our Terms of
                         Service.</p>
                 </form>
             </div>
@@ -486,11 +503,11 @@
         function selectCard(element, type) {
             const siblings = element.parentElement.children;
             for (let sibling of siblings) {
-                sibling.classList.remove('selected', 'border-brand-red', 'bg-brand-red/5');
-                sibling.classList.add('border-white/10', 'bg-brand-dark');
+                sibling.classList.remove('selected', 'border-brand-orange', 'bg-brand-orange/5');
+                sibling.classList.add('border-brand-white/10', 'bg-brand-purple');
             }
-            element.classList.add('selected', 'border-brand-red', 'bg-brand-red/5');
-            element.classList.remove('border-white/10', 'bg-brand-dark');
+            element.classList.add('selected', 'border-brand-orange', 'bg-brand-orange/5');
+            element.classList.remove('border-brand-white/10', 'bg-brand-purple');
 
             const price = parseInt(element.getAttribute('data-price'));
 
@@ -501,6 +518,13 @@
                 document.getElementById('summary-plan-name').innerText = planName + ' Package';
                 document.getElementById('summary-plan-price').innerText = planPrice;
                 document.getElementById('input-plan').value = selectedPlan;
+                
+                // Map plan to distribution count
+                let distCount = 5; // default to growth
+                if(selectedPlan === 'access') distCount = 1;
+                if(selectedPlan === 'authority') distCount = 10;
+                if(selectedPlan === 'ultimate') distCount = 20;
+                document.getElementById('input-distribution').value = distCount;
             }
             else if (type === 'strategy') {
                 selectedStrategy = element.getAttribute('data-strategy');

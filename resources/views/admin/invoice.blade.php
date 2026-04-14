@@ -41,8 +41,9 @@
         }
 
         .logo {
-            height: 40px;
+            max-height: 80px;
             width: auto;
+            max-width: 100%;
         }
 
         .invoice-title {
@@ -199,8 +200,7 @@
     <table class="header-table">
         <tr>
             <td class="header-left">
-                <img src="{{ public_path('Images/prism_logo_v2.png') }}" class="logo" alt="Prism Media Hub"
-                    style="height: 80px;">
+                <img src="{{ public_path('Images/prism_media_logo_FA-02.png') }}" class="logo" alt="Prism Media Hub">
             </td>
             <td class="header-right">
                 <h1 class="invoice-title">Invoice</h1>
@@ -240,8 +240,8 @@
                 <div class="info-label">Issued By</div>
                 <div class="info-value">
                     Prism Media Hub<br>
-                    <p>admin@brandthirty.com</p>
-                    <p>www.brandthirty.com</p>
+                    <p>admin@prismmediahub.test</p>
+                    <p>www.prismmediahub.test</p>
                 </div>
             </td>
         </tr>
