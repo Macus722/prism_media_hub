@@ -840,7 +840,7 @@
                 class="bg-brand-white rounded-2xl border border-brand-purple/10 p-6 shadow-xl relative overflow-hidden flex flex-col h-full">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-brand-orange/5 rounded-bl-full -mr-4 -mt-4"></div>
                 <h3 class="text-brand-purple font-bold text-2xl mb-2">Access</h3>
-                <div class="text-brand-orange text-3xl font-extrabold mb-6">1980</div>
+                <!-- <div class="text-brand-orange text-3xl font-extrabold mb-6">1980</div> -->
                 <ul class="space-y-3 mb-8 text-brand-purple/80 text-sm flex-1">
                     <li class="flex justify-between border-b border-brand-purple/10 pb-2">
                         <span>Guaranteed Outlets</span>
@@ -870,7 +870,7 @@
                     class="absolute top-0 right-0 bg-brand-orange text-brand-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                     POPULAR</div>
                 <h3 class="text-brand-purple font-bold text-2xl mb-2">Growth</h3>
-                <div class="text-brand-orange text-3xl font-extrabold mb-6">2380</div>
+                <!-- <div class="text-brand-orange text-3xl font-extrabold mb-6">2380</div> -->
                 <ul class="space-y-3 mb-8 text-brand-purple/80 text-sm flex-1">
                     <li class="flex justify-between border-b border-brand-purple/10 pb-2">
                         <span>Guaranteed Outlets</span>
@@ -898,7 +898,7 @@
                 class="bg-brand-white rounded-2xl border border-brand-purple/10 p-6 shadow-xl relative overflow-hidden flex flex-col h-full">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-brand-orange/5 rounded-bl-full -mr-4 -mt-4"></div>
                 <h3 class="text-brand-purple font-bold text-2xl mb-2">Authority</h3>
-                <div class="text-brand-orange text-3xl font-extrabold mb-6">3980</div>
+                <!-- <div class="text-brand-orange text-3xl font-extrabold mb-6">3980</div> -->
                 <ul class="space-y-3 mb-8 text-brand-purple/80 text-sm flex-1">
                     <li class="flex justify-between border-b border-brand-purple/10 pb-2">
                         <span>Guaranteed Outlets</span>
@@ -926,7 +926,7 @@
                 class="bg-brand-white rounded-2xl border border-brand-purple/10 p-6 shadow-xl relative overflow-hidden flex flex-col h-full">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-brand-orange/5 rounded-bl-full -mr-4 -mt-4"></div>
                 <h3 class="text-brand-purple font-bold text-2xl mb-2">Ultimate</h3>
-                <div class="text-brand-orange text-3xl font-extrabold mb-6">4980</div>
+                <!-- <div class="text-brand-orange text-3xl font-extrabold mb-6">4980</div> -->
                 <ul class="space-y-3 mb-8 text-brand-purple/80 text-sm flex-1">
                     <li class="flex justify-between border-b border-brand-purple/10 pb-2">
                         <span>Guaranteed Outlets</span>
