@@ -275,7 +275,7 @@
                     <!-- Desktop Scroll: grayscale by default, full color + scale on hover/active -->
                     <div class="hidden md:flex w-max animate-scroll hover:pause">
                         @php
-                            $logos = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '8.png', 'BOSS (1).png', '未命名的设计 (1) (1).png', '未命名的设计 (9).png', '未命名的设计 (10).png', '未命名的设计 (12).png', '未命名的设计 (13).png', '未命名的设计 (14).png'];
+                            $logos = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '8.png', 'client_logo_boss.png', 'client_logo_7.png', 'client_logo_9.png', 'client_logo_10.png', 'client_logo_12.png', 'client_logo_13.png', 'client_logo_14.png'];
                         @endphp
                         @foreach([1, 2] as $set)
                             <div class="flex items-center">
