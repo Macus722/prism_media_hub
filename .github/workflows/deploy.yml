@@ -1,4 +1,4 @@
-name: Deploy to cPanel
+name: Deploy to Namecheap
 
 on:
   push:
@@ -6,22 +6,25 @@ on:
       - main
 
 jobs:
-  web-deploy:
+  deploy:
     name: Deploy
     runs-on: ubuntu-latest
+
     steps:
-      - name: Get latest code
+      - name: Checkout code
         uses: actions/checkout@v4
-      
-      - name: Setup PHP
+
+      - name: Setup PHP 8.2
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          
-      - name: Install Dependencies
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist --optimize-autoloader
+          extensions: mbstring, pdo, pdo_pgsql, pgsql, openssl, tokenizer, xml, ctype, json, curl
+          coverage: none
 
-      - name: Sync files
+      - name: Install Composer dependencies (production)
+        run: composer install --no-dev --no-interaction --no-progress --prefer-dist --optimize-autoloader
+
+      - name: Deploy files via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -29,13 +32,38 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           protocol: ftps
-          server-dir: ./prismmediahub.com/
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
           exclude: |
             **/.git*
             **/.git*/**
             **/node_modules/**
+            **/.agent_rules/**
             .env
-            /storage/*.key
-            /temp_bg_removal/**
-            /logo/**
-            /my-important-project/**
+            .env.*
+            make_magic_zip.ps1
+            upload-via-ftp.ps1
+            HOW-TO-UPLOAD-ZIP-VIA-FTP.md
+            prism_media_hub_*.zip
+            **/storage/logs/**
+            **/storage/framework/cache/**
+            **/storage/framework/sessions/**
+            **/storage/framework/views/**
+            **/bootstrap/cache/**
+
+      - name: Post-deploy — Fix permissions & clear caches via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: |
+            cd ${{ secrets.SSH_APP_PATH }}
+            chmod -R 755 storage bootstrap/cache
+            mkdir -p storage/framework/sessions storage/framework/views storage/framework/cache storage/logs
+            php artisan config:clear
+            php artisan cache:clear
+            php artisan view:clear
+            php artisan route:cache
+            php artisan config:cache
+            echo "✅ Deploy complete"

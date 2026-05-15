@@ -222,26 +222,20 @@
 
         <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-            <div
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-brand-white/10 bg-brand-white/5 text-brand-white/80 text-xs font-semibold tracking-wider mb-8 backdrop-blur-sm animate-fade-in-up">
-                <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
-                New: DeepSeek & ChatGPT Indexing
-            </div>
 
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-brand-white tracking-tight leading-tight mb-6 animate-fade-in-up"
                 style="animation-delay: 0.1s;">
-                ESTABLISH DOMINANCE ON <br>
-                <span class="text-brand-white">GOOGLE & GENERATIVE AI</span>
+                Asia's #1 Google &amp; <br>
+                <span class="text-brand-white">ChatGPT Exposure Expert</span>
             </h1>
 
             <p class="mt-8 text-xl md:text-2xl text-brand-white/80 max-w-3xl mx-auto leading-relaxed animate-fade-in-up font-normal"
                 style="animation-delay: 0.2s;">
-                Asia's Premier Reputation Infrastructure. <span
-                    class="text-brand-white font-medium">Precision-Engineered
-                    Narratives.</span>
+                The region's leading authority in <span
+                    class="text-brand-white font-medium">Google Search Optimization</span>
+                and <span class="text-brand-white font-medium">Generative AI Visibility</span>.
                 <br class="hidden md:block">
-                Amplify SEO Authority and Secure Strategic Citations across <span
-                    class="text-brand-white font-medium">ChatGPT, Gemini, and Next-Gen Models</span>.
+                Get cited by <span class="text-brand-white font-medium">ChatGPT, Gemini &amp; Perplexity</span> — and seen on Malaysia's biggest LED billboards.
             </p>
 
             <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up"
@@ -306,7 +300,339 @@
         </div>
     </section>
 
+    <!-- ============================================================
+         DUAL DOMINANCE — Scheme A: Premium Split-Screen
+         Scope: #dd-* selectors only. No global CSS changes.
+    ============================================================ -->
+    <section id="dual-dominance"
+             aria-label="Dual Dominance — Digital AI Visibility and LED Billboard Advertising"
+             class="relative overflow-hidden bg-brand-purple py-24 md:py-32">
+
+        <!-- Ambient radial glow -->
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-purple via-brand-purple/96 to-transparent"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[650px]
+                        bg-[radial-gradient(ellipse_at_center,rgba(249,115,22,0.08)_0%,transparent_68%)]"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16 md:mb-20" data-aos="fade-up">
+                <span class="inline-block px-4 py-1.5 rounded-full border border-brand-orange/35
+                             bg-brand-orange/10 text-brand-orange text-xs font-bold
+                             tracking-widest uppercase mb-6">
+                    One Partner. Total Visibility.
+                </span>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-white tracking-tight leading-tight">
+                    Show Up <span class="text-brand-orange">Everywhere</span> That Matters
+                </h2>
+                <p class="mt-5 text-base md:text-lg text-brand-white/60 max-w-2xl mx-auto leading-relaxed">
+                    Dominate <strong class="text-brand-white/90 font-semibold">Google, ChatGPT &amp; Generative AI</strong>
+                    search results while grabbing attention on
+                    <strong class="text-brand-white/90 font-semibold">Malaysia's busiest highways</strong>
+                    — all through a single, unified partnership.
+                </p>
+            </div>
+
+            <!-- 50/50 Split Grid -->
+            <div id="dd-split"
+                 class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14 items-stretch"
+                 data-aos="fade-up" data-aos-delay="100">
+
+                <!-- LEFT COLUMN: Unified Text Card -->
+                <div id="dd-left"
+                     class="rounded-3xl p-8 md:p-10 flex flex-col"
+                     style="background:#1e1730;border:1px solid rgba(255,255,255,0.07);
+                            box-shadow:0 24px 80px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.05);">
+
+                    <!-- Block 1: Digital AI Dominance -->
+                    <div class="mb-8">
+                        <div class="flex items-center gap-2.5 mb-5">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                                 style="background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.25);">
+                                <i class="fas fa-robot text-brand-orange text-xs" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-brand-orange text-[0.65rem] font-bold tracking-widest uppercase">
+                                Digital AI Dominance
+                            </span>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-brand-white leading-tight mb-3">
+                            Show Up on Google,<br>ChatGPT &amp; Generative AI
+                        </h3>
+                        <p class="text-brand-white/55 text-sm leading-relaxed mb-6">
+                            Your brand becomes a trusted citation across every major AI search engine —
+                            from <strong class="text-brand-white/85 font-medium">Google Search Overviews</strong>
+                            to <strong class="text-brand-white/85 font-medium">ChatGPT answers</strong>.
+                            We engineer your narrative for the LLM era.
+                        </p>
+                        <div class="flex flex-wrap gap-2" role="list" aria-label="Supported AI Platforms">
+                            <span class="dd-badge" role="listitem">
+                                <i class="fab fa-google" aria-hidden="true"></i> Google Search
+                            </span>
+                            <span class="dd-badge" role="listitem">
+                                <i class="fas fa-bolt" aria-hidden="true"></i> ChatGPT Citations
+                            </span>
+                            <span class="dd-badge" role="listitem">
+                                <i class="fas fa-brain" aria-hidden="true"></i> Gemini &amp; Perplexity
+                            </span>
+                            <span class="dd-badge" role="listitem">
+                                <i class="fas fa-newspaper" aria-hidden="true"></i> Google News
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="border-t" style="border-color:rgba(249,115,22,0.14);"></div>
+
+                    <!-- Block 2: Highway LED Billboards -->
+                    <div class="mt-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2.5 mb-5">
+                                <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                                     style="background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.25);">
+                                    <i class="fas fa-th-large text-brand-orange text-xs" aria-hidden="true"></i>
+                                </div>
+                                <span class="text-brand-orange text-[0.65rem] font-bold tracking-widest uppercase">
+                                    Highway LED Billboards
+                                </span>
+                            </div>
+                            <h3 class="text-xl md:text-2xl font-bold text-brand-white leading-tight mb-3">
+                                Malaysia's Busiest Highways.<br>Maximum Impact.
+                            </h3>
+                            <p class="text-brand-white/55 text-sm leading-relaxed mb-7">
+                                High-impact LED billboard campaigns on Malaysia's highest-traffic corridors —
+                                capturing <strong class="text-brand-white/85 font-medium">thousands of daily impressions</strong>,
+                                day and night, in premium locations that command attention.
+                            </p>
+                        </div>
+                        <!-- Stat boxes -->
+                        <div class="grid grid-cols-3 gap-3" role="list" aria-label="Campaign reach statistics">
+                            <div class="dd-stat-box" role="listitem">
+                                <span class="dd-stat-num">500K+</span>
+                                <span class="dd-stat-lbl">Daily Impressions</span>
+                            </div>
+                            <div class="dd-stat-box" role="listitem">
+                                <span class="dd-stat-num">24/7</span>
+                                <span class="dd-stat-lbl">Live Display</span>
+                            </div>
+                            <div class="dd-stat-box" role="listitem">
+                                <span class="dd-stat-num">KL &amp; MY</span>
+                                <span class="dd-stat-lbl">Prime Locations</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- END LEFT COLUMN -->
+
+                <!-- RIGHT COLUMN: Triptych LED Photo Gallery -->
+                <div id="dd-right"
+                     class="rounded-3xl overflow-hidden"
+                     style="border:1px solid rgba(255,255,255,0.08);
+                            box-shadow:0 24px 80px rgba(0,0,0,0.35);
+                            background:#12101d;">
+                    <div id="dd-triptych">
+
+                        <!-- Hero image — top 60% -->
+                        <div class="dd-hero-img">
+                            <img src="{{ asset('Images/billboard_01.png') }}"
+                                 alt="High-impact LED billboard displaying BMW X3 at a major Kuala Lumpur intersection — Prism Media Hub Malaysia premium highway advertising"
+                                 loading="eager"
+                                 decoding="async">
+                        </div>
+
+                        <!-- Bottom row — two equal landscape images, 40% -->
+                        <div class="dd-bottom-row">
+                            <div class="dd-thumb">
+                                <img src="{{ asset('Images/billboard_02.png') }}"
+                                     alt="LED billboard showcasing Archidex event along KLCC highway Malaysia — Prism Media Hub out-of-home advertising"
+                                     loading="lazy"
+                                     decoding="async">
+                            </div>
+                            <div class="dd-thumb">
+                                <img src="{{ asset('Images/billboard_03.png') }}"
+                                     alt="3D immersive LED night billboard at Kuala Lumpur commercial district — Prism Media Hub premium outdoor advertising"
+                                     loading="lazy"
+                                     decoding="async">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- END RIGHT COLUMN -->
+
+            </div>
+            <!-- END 50/50 SPLIT -->
+
+        </div>
+
+
+        <!-- Bottom Three Pillars — stays within dark section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5" data-aos="fade-up" data-aos-delay="150">
+
+                <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10
+                            hover:border-brand-orange/25 hover:bg-white/[0.08] transition-all duration-300">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-orange/15 border border-brand-orange/25
+                                flex items-center justify-center">
+                        <i class="fas fa-chart-line text-brand-orange text-sm" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-brand-white text-sm mb-1">Measurable AI Ranking Lift</p>
+                        <p class="text-brand-white/60 text-xs leading-relaxed">Track citations across ChatGPT, Gemini &amp; Google with real data dashboards.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10
+                            hover:border-brand-orange/25 hover:bg-white/[0.08] transition-all duration-300">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-orange/15 border border-brand-orange/25
+                                flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-brand-orange text-sm" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-brand-white text-sm mb-1">Premium Billboard Locations</p>
+                        <p class="text-brand-white/60 text-xs leading-relaxed">High-footfall highways, city centres &amp; key commercial corridors across Malaysia.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10
+                            hover:border-brand-orange/25 hover:bg-white/[0.08] transition-all duration-300">
+                    <div class="flex-shrink-0 w-9 h-9 rounded-lg bg-brand-orange/15 border border-brand-orange/25
+                                flex items-center justify-center">
+                        <i class="fas fa-handshake text-brand-orange text-sm" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-brand-white text-sm mb-1">One Partner. Zero Complexity.</p>
+                        <p class="text-brand-white/60 text-xs leading-relaxed">Digital and physical visibility managed under a single, seamless engagement.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- END DUAL DOMINANCE — Scheme A -->
+
+
+    {{-- SCOPED CSS — #dd-* and .dd-* only. Zero global impact. --}}
+    <style>
+        /* Triptych grid */
+        #dd-triptych {
+            display: grid;
+            grid-template-rows: 60% 40%;
+            width: 100%;
+            height: 100%;
+            min-height: 480px;
+        }
+
+        /* Hero image slot */
+        .dd-hero-img {
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid rgba(249,115,22,0.18);
+        }
+        .dd-hero-img img {
+            width: 100%; height: 100%;
+            object-fit: cover; display: block;
+            transition: transform 0.7s ease;
+        }
+        .dd-hero-img:hover img { transform: scale(1.03); }
+
+        /* Bottom thumbnail row */
+        .dd-bottom-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .dd-thumb {
+            position: relative;
+            overflow: hidden;
+        }
+        .dd-thumb:first-child {
+            border-right: 2px solid rgba(249,115,22,0.18);
+        }
+        .dd-thumb img {
+            width: 100%; height: 100%;
+            object-fit: cover; display: block;
+            transition: transform 0.7s ease;
+        }
+        .dd-thumb:hover img { transform: scale(1.04); }
+
+        /* Gloss overlay on each image slot */
+        .dd-hero-img::after, .dd-thumb::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(160deg, rgba(255,255,255,0.04) 0%, transparent 50%, rgba(18,16,29,0.20) 100%);
+            pointer-events: none;
+        }
+
+        /* Platform badges */
+        .dd-badge {
+            display: inline-flex; align-items: center; gap: 0.3rem;
+            font-size: 0.65rem; font-weight: 700;
+            padding: 0.3rem 0.65rem; border-radius: 999px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.10);
+            color: rgba(255,255,255,0.72);
+            letter-spacing: 0.02em;
+        }
+        .dd-badge i { color: #f97316; font-size: 0.58rem; }
+
+        /* Stat boxes */
+        .dd-stat-box {
+            display: flex; flex-direction: column;
+            padding: 0.75rem 1rem; border-radius: 12px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+        .dd-stat-num {
+            font-size: 1.2rem; font-weight: 900;
+            color: #f97316; line-height: 1;
+            letter-spacing: -0.02em;
+        }
+        .dd-stat-lbl {
+            font-size: 0.58rem; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.38); margin-top: 0.28rem;
+        }
+
+        /* Desktop: both columns stretch to same height via grid items-stretch */
+        @media (min-width: 1024px) {
+            #dd-left  { min-height: 500px; }
+            #dd-right { min-height: 500px; }
+            #dd-triptych { min-height: 100%; }
+        }
+
+        /* Tablet */
+        @media (max-width: 1023px) {
+            #dd-triptych { min-height: 380px; }
+        }
+
+        /* Mobile */
+        @media (max-width: 639px) {
+            #dd-triptych {
+                grid-template-rows: 55% 45%;
+                min-height: 320px;
+            }
+        }
+    </style>
+
+    <!-- ── White Separator ─────────────────────────────────── -->
+    <div class="bg-white border-t border-b border-brand-purple/8 py-10 md:py-14" aria-hidden="true">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-4">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent to-brand-purple/15"></div>
+                <span class="text-brand-purple/30 text-xs font-bold tracking-[0.25em] uppercase select-none">
+                    How It Works
+                </span>
+                <div class="h-px flex-1 bg-gradient-to-l from-transparent to-brand-purple/15"></div>
+            </div>
+        </div>
+    </div>
+    <!-- ── /White Separator ─────────────────────────────────── -->
+
     <section id="how-it-works" class="py-24 bg-brand-purple relative overflow-hidden">
+
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-20" data-aos="fade-up">
@@ -321,31 +647,33 @@
 
             <div class="space-y-8 relative">
                 <!-- Vertical Line -->
-                <div class="absolute left-[28px] top-8 bottom-8 w-px bg-brand-white/10 hidden md:block">
+                <div class="absolute left-[28px] top-8 bottom-8 w-px bg-brand-white/15 hidden md:block">
                 </div>
 
                 <!-- Step 1 -->
                 <div class="relative flex flex-col md:flex-row gap-8 items-center md:items-start group"
                     data-aos="fade-up">
                     <div class="hidden md:flex flex-col items-center z-10">
-                        <div
-                            class="w-14 h-14 rounded-full bg-brand-white border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl font-bold relative group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-brand-white transition duration-500 shadow-lg">
+                        <div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/20
+                                    flex items-center justify-center text-brand-orange text-xl font-bold
+                                    group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-brand-white
+                                    transition-all duration-300 shadow-lg">
                             01
                         </div>
                     </div>
-                    <div
-                        class="flex-1 bg-brand-white rounded-2xl p-8 hover:border-brand-orange/20 border border-brand-purple/10 text-center md:text-left transition-all shadow-card hover:shadow-subtle">
+                    <div class="flex-1 rounded-2xl p-8 bg-white/5 backdrop-blur-md border border-white/10
+                                text-center md:text-left transition-all duration-300
+                                hover:border-brand-orange/30 hover:bg-white/[0.08]
+                                hover:shadow-[0_0_30px_rgba(249,115,22,0.10)]">
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                            <div
-                                class="p-3 bg-brand-orange/10 rounded-xl text-brand-orange border border-brand-orange/20">
+                            <div class="p-3 bg-brand-orange/10 rounded-xl text-brand-orange border border-brand-orange/20 flex-shrink-0">
                                 <i class="fas fa-pen-fancy text-2xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-brand-purple mb-3 leading-tight">
-                                    <span class="text-brand-orange">Prism</span> Writes and publishes your <span
-                                        class="text-brand-purple">Business Content</span> on <span
-                                        class="text-brand-purple border-b border-brand-orange/30">Authority
-                                        Platforms</span>.
+                                <h3 class="text-2xl md:text-3xl font-bold text-brand-white mb-3 leading-tight">
+                                    <span class="text-brand-orange">Prism</span> Writes and publishes your
+                                    <span class="text-brand-white">Business Content</span> on
+                                    <span class="text-brand-white border-b border-brand-orange/40">Authority Platforms</span>.
                                 </h3>
                             </div>
                         </div>
@@ -356,35 +684,41 @@
                 <div class="relative flex flex-col md:flex-row gap-8 items-center md:items-start group"
                     data-aos="fade-up" data-aos-delay="150">
                     <div class="hidden md:flex flex-col items-center z-10">
-                        <div
-                            class="w-14 h-14 rounded-full bg-brand-white border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl font-bold relative group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-brand-white transition duration-500 shadow-lg">
+                        <div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/20
+                                    flex items-center justify-center text-brand-orange text-xl font-bold
+                                    group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-brand-white
+                                    transition-all duration-300 shadow-lg">
                             02
                         </div>
                     </div>
-                    <div
-                        class="flex-1 bg-brand-white rounded-2xl p-8 hover:border-brand-orange/20 border border-brand-purple/10 text-center md:text-left transition-all shadow-card hover:shadow-subtle">
+                    <div class="flex-1 rounded-2xl p-8 bg-white/5 backdrop-blur-md border border-white/10
+                                text-center md:text-left transition-all duration-300
+                                hover:border-brand-orange/30 hover:bg-white/[0.08]
+                                hover:shadow-[0_0_30px_rgba(249,115,22,0.10)]">
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                            <div
-                                class="p-3 bg-brand-orange/10 rounded-xl text-brand-orange border border-brand-orange/20">
+                            <div class="p-3 bg-brand-orange/10 rounded-xl text-brand-orange border border-brand-orange/20 flex-shrink-0">
                                 <i class="fas fa-search text-2xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-brand-purple mb-3 leading-tight">
-                                    Appears on <span class="text-brand-purple">Google</span>, <span
-                                        class="text-brand-purple">ChatGPT</span>, <span
-                                        class="text-brand-orange">DeepSeek</span> and other <span
-                                        class="font-bold text-brand-purple">AI Engines</span>.
+                                <h3 class="text-2xl md:text-3xl font-bold text-brand-white mb-3 leading-tight">
+                                    Appears on <span class="text-brand-white">Google</span>,
+                                    <span class="text-brand-white">ChatGPT</span>,
+                                    <span class="text-brand-orange">DeepSeek</span> and other
+                                    <span class="font-bold text-brand-white">AI Engines</span>.
                                 </h3>
                                 <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
-                                    <span
-                                        class="flex items-center gap-1 text-xs font-bold text-brand-purple/70 bg-brand-purple/5 px-3 py-1.5 rounded-md border border-brand-purple/10"><i
-                                            class="fab fa-google text-brand-orange"></i> Google News</span>
-                                    <span
-                                        class="flex items-center gap-1 text-xs font-bold text-brand-purple/70 bg-brand-purple/5 px-3 py-1.5 rounded-md border border-brand-purple/10"><i
-                                            class="fas fa-robot text-brand-orange"></i> ChatGPT</span>
-                                    <span
-                                        class="flex items-center gap-1 text-xs font-bold text-brand-purple/70 bg-brand-purple/5 px-3 py-1.5 rounded-md border border-brand-purple/10"><i
-                                            class="fas fa-brain text-brand-orange"></i> Claude</span>
+                                    <span class="flex items-center gap-1 text-xs font-bold text-brand-white/75
+                                                 bg-white/10 px-3 py-1.5 rounded-md border border-white/15">
+                                        <i class="fab fa-google text-brand-orange"></i> Google News
+                                    </span>
+                                    <span class="flex items-center gap-1 text-xs font-bold text-brand-white/75
+                                                 bg-white/10 px-3 py-1.5 rounded-md border border-white/15">
+                                        <i class="fas fa-robot text-brand-orange"></i> ChatGPT
+                                    </span>
+                                    <span class="flex items-center gap-1 text-xs font-bold text-brand-white/75
+                                                 bg-white/10 px-3 py-1.5 rounded-md border border-white/15">
+                                        <i class="fas fa-brain text-brand-orange"></i> Claude
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -395,24 +729,25 @@
                 <div class="relative flex flex-col md:flex-row gap-8 items-center md:items-start group"
                     data-aos="fade-up" data-aos-delay="300">
                     <div class="hidden md:flex flex-col items-center z-10">
-                        <div
-                            class="w-14 h-14 rounded-full bg-brand-white border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl font-bold relative group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-brand-white transition duration-500 shadow-lg">
+                        <div class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-sm border border-white/20
+                                    flex items-center justify-center text-brand-orange text-xl font-bold
+                                    group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-brand-white
+                                    transition-all duration-300 shadow-lg">
                             03
                         </div>
                     </div>
-                    <div
-                        class="flex-1 bg-brand-white rounded-2xl p-8 hover:border-brand-orange/20 border border-brand-purple/10 text-center md:text-left transition-all shadow-card hover:shadow-subtle">
+                    <div class="flex-1 rounded-2xl p-8 bg-white/5 backdrop-blur-md border border-white/10
+                                text-center md:text-left transition-all duration-300
+                                hover:border-brand-orange/30 hover:bg-white/[0.08]
+                                hover:shadow-[0_0_30px_rgba(249,115,22,0.10)]">
                         <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                            <div
-                                class="p-3 bg-brand-orange/10 rounded-xl text-brand-orange border border-brand-orange/20">
+                            <div class="p-3 bg-brand-orange/10 rounded-xl text-brand-orange border border-brand-orange/20 flex-shrink-0">
                                 <i class="fas fa-rocket text-2xl"></i>
                             </div>
                             <div>
-                                <h3 class="text-2xl md:text-3xl font-bold text-brand-purple mb-3 leading-tight">
-                                    Boosting your <span class="text-brand-orange">Domain Authority</span> and
-                                    driving
-                                    <span class="text-brand-purple border-b border-brand-orange/30">Organic
-                                        Traffic</span>
+                                <h3 class="text-2xl md:text-3xl font-bold text-brand-white mb-3 leading-tight">
+                                    Boosting your <span class="text-brand-orange">Domain Authority</span> and driving
+                                    <span class="text-brand-white border-b border-brand-orange/40">Organic Traffic</span>
                                     while you sleep.
                                 </h3>
                             </div>
@@ -480,18 +815,24 @@
                         (GEO)</span>.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="0">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="flex gap-5 group p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10
+                            hover:border-brand-orange/25 hover:bg-white/[0.08]
+                            hover:shadow-[0_0_25px_rgba(249,115,22,0.10)]
+                            transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
                     <div class="flex-shrink-0">
-                        <div
-                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
+                        <div class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center
+                                    border border-brand-white/10 text-brand-orange text-2xl
+                                    group-hover:bg-brand-orange group-hover:text-brand-white
+                                    group-hover:shadow-[0_0_20px_rgba(249,115,22,0.30)]
+                                    transition-all duration-300">
                             <i class="fas fa-chart-line"></i>
                         </div>
                     </div>
                     <div>
-                        <h4
-                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
-                            SEO & GEO Experts</h4>
+                        <h4 class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors duration-300">
+                            SEO &amp; GEO Experts</h4>
                         <p class="text-brand-white/70 text-sm leading-relaxed">Rank on Google and get cited by AI
                             (ChatGPT/Perplexity) through our <strong class="text-brand-white">Generative Engine
                                 Optimization</strong> strategies.
@@ -499,94 +840,114 @@
                     </div>
                 </div>
 
-                <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex gap-5 group p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10
+                            hover:border-brand-orange/25 hover:bg-white/[0.08]
+                            hover:shadow-[0_0_25px_rgba(249,115,22,0.10)]
+                            transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex-shrink-0">
-                        <div
-                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
+                        <div class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center
+                                    border border-brand-white/10 text-brand-orange text-2xl
+                                    group-hover:bg-brand-orange group-hover:text-brand-white
+                                    group-hover:shadow-[0_0_20px_rgba(249,115,22,0.30)]
+                                    transition-all duration-300">
                             <i class="fas fa-shield-alt"></i>
                         </div>
                     </div>
                     <div>
-                        <h4
-                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
+                        <h4 class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors duration-300">
                             High DA Outlets</h4>
                         <p class="text-brand-white/70 text-sm leading-relaxed">We publish on sites with high Domain
-                            Authority
-                            (DA), ensuring valuable backlinks that boost your site's reputation.</p>
+                            Authority (DA), ensuring valuable backlinks that boost your site's reputation.</p>
                     </div>
                 </div>
 
-                <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex gap-5 group p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10
+                            hover:border-brand-orange/25 hover:bg-white/[0.08]
+                            hover:shadow-[0_0_25px_rgba(249,115,22,0.10)]
+                            transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex-shrink-0">
-                        <div
-                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
+                        <div class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center
+                                    border border-brand-white/10 text-brand-orange text-2xl
+                                    group-hover:bg-brand-orange group-hover:text-brand-white
+                                    group-hover:shadow-[0_0_20px_rgba(249,115,22,0.30)]
+                                    transition-all duration-300">
                             <i class="fas fa-pen-nib"></i>
                         </div>
                     </div>
                     <div>
-                        <h4
-                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
+                        <h4 class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors duration-300">
                             Professional PR Writing</h4>
                         <p class="text-brand-white/70 text-sm leading-relaxed">Our team crafts SEO-optimized news
-                            stories
-                            designed to drive interest, engagement, and click-throughs.</p>
+                            stories designed to drive interest, engagement, and click-throughs.</p>
                     </div>
                 </div>
 
-                <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex gap-5 group p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10
+                            hover:border-brand-orange/25 hover:bg-white/[0.08]
+                            hover:shadow-[0_0_25px_rgba(249,115,22,0.10)]
+                            transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex-shrink-0">
-                        <div
-                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
+                        <div class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center
+                                    border border-brand-white/10 text-brand-orange text-2xl
+                                    group-hover:bg-brand-orange group-hover:text-brand-white
+                                    group-hover:shadow-[0_0_20px_rgba(249,115,22,0.30)]
+                                    transition-all duration-300">
                             <i class="fas fa-certificate"></i>
                         </div>
                     </div>
                     <div>
-                        <h4
-                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
+                        <h4 class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors duration-300">
                             "As Seen On" Trust Badge</h4>
                         <p class="text-brand-white/70 text-sm leading-relaxed">Build instant trust and conversion
-                            rates on
-                            your website by displaying our authorized media badges.</p>
+                            rates on your website by displaying our authorized media badges.</p>
                     </div>
                 </div>
 
-                <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex gap-5 group p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10
+                            hover:border-brand-orange/25 hover:bg-white/[0.08]
+                            hover:shadow-[0_0_25px_rgba(249,115,22,0.10)]
+                            transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex-shrink-0">
-                        <div
-                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
+                        <div class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center
+                                    border border-brand-white/10 text-brand-orange text-2xl
+                                    group-hover:bg-brand-orange group-hover:text-brand-white
+                                    group-hover:shadow-[0_0_20px_rgba(249,115,22,0.30)]
+                                    transition-all duration-300">
                             <i class="fas fa-headset"></i>
                         </div>
                     </div>
                     <div>
-                        <h4
-                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
+                        <h4 class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors duration-300">
                             Helpful Support</h4>
                         <p class="text-brand-white/70 text-sm leading-relaxed">50+ Support Guides and Priority Live
-                            Chat
-                            support to help you manage your brand's reputation.</p>
+                            Chat support to help you manage your brand's reputation.</p>
                     </div>
                 </div>
 
-                <div class="flex gap-5 group" data-aos="fade-up" data-aos-delay="500">
+                <div class="flex gap-5 group p-5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10
+                            hover:border-brand-orange/25 hover:bg-white/[0.08]
+                            hover:shadow-[0_0_25px_rgba(249,115,22,0.10)]
+                            transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
                     <div class="flex-shrink-0">
-                        <div
-                            class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center border border-brand-white/10 text-brand-orange text-2xl shadow-sm group-hover:bg-brand-orange group-hover:text-brand-white transition-all duration-300">
+                        <div class="w-14 h-14 bg-brand-white/5 rounded-xl flex items-center justify-center
+                                    border border-brand-white/10 text-brand-orange text-2xl
+                                    group-hover:bg-brand-orange group-hover:text-brand-white
+                                    group-hover:shadow-[0_0_20px_rgba(249,115,22,0.30)]
+                                    transition-all duration-300">
                             <i class="fas fa-file-alt"></i>
                         </div>
                     </div>
                     <div>
-                        <h4
-                            class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors">
+                        <h4 class="text-xl font-bold mb-2 tracking-tight text-brand-white group-hover:text-brand-orange transition-colors duration-300">
                             White Label Reports</h4>
                         <p class="text-brand-white/70 text-sm leading-relaxed">Perfect for agencies. Get unbranded
-                            reports
-                            with all live backlinks to share directly with your clients.</p>
+                            reports with all live backlinks to share directly with your clients.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
-
 
 
     @include('includes.home_content')

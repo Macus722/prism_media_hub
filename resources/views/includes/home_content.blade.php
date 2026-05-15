@@ -254,26 +254,26 @@
         <div class="bg-brand-white rounded-3xl border border-brand-purple/10 shadow-lg overflow-hidden mb-24"
             data-aos="fade-up">
 
-            <div class="flex flex-wrap border-b border-brand-purple/10 bg-brand-purple/5">
+            <div class="grid grid-cols-3 border-b border-brand-purple/10 bg-brand-purple/5">
                 <button onclick="switchTab('google')" id="tab-google"
-                    class="platform-tab flex-1 py-4 px-4 flex items-center justify-start md:justify-center gap-2 md:gap-3 text-base md:text-lg font-bold border-b-2 border-brand-orange bg-brand-orange/10 text-brand-purple transition-all">
+                    class="platform-tab py-3 md:py-5 px-1 md:px-4 flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-3 text-[11px] sm:text-sm md:text-lg font-bold border-b-2 border-brand-orange bg-brand-orange/10 text-brand-purple transition-all text-center">
                     <img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_48dp.png"
-                        alt="Google logo" class="w-6 h-6">
-                    <span class="font-display tracking-wide">Google Dominance</span>
+                        alt="Google logo" class="w-5 h-5 md:w-6 md:h-6 flex-shrink-0">
+                    <span class="font-display tracking-tight md:tracking-wide leading-tight">Google<span class="hidden md:inline"> </span><br class="md:hidden">Dominance</span>
                 </button>
                 <button onclick="switchTab('chatgpt')" id="tab-chatgpt"
-                    class="platform-tab flex-1 py-6 px-4 flex items-center justify-center gap-3 text-lg font-bold border-b-2 border-transparent text-brand-purple/70 transition-all">
+                    class="platform-tab py-3 md:py-5 px-1 md:px-4 flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-3 text-[11px] sm:text-sm md:text-lg font-bold border-b-2 border-transparent text-brand-purple/70 transition-all text-center">
                     <span
-                        class="w-6 h-6 bg-[#10a37f] rounded-full flex items-center justify-center text-brand-white text-xs shadow-md"><i
+                        class="w-5 h-5 md:w-6 md:h-6 bg-[#10a37f] rounded-full flex items-center justify-center text-brand-white text-[10px] md:text-xs shadow-md flex-shrink-0"><i
                             class="fas fa-bolt"></i></span>
-                    <span class="font-display tracking-wide">ChatGPT Search</span>
+                    <span class="font-display tracking-tight md:tracking-wide leading-tight">ChatGPT<span class="hidden md:inline"> </span><br class="md:hidden">Search</span>
                 </button>
                 <button onclick="switchTab('deepseek')" id="tab-deepseek"
-                    class="platform-tab flex-1 py-6 px-4 flex items-center justify-center gap-3 text-lg font-bold border-b-2 border-transparent text-brand-purple/70 transition-all">
+                    class="platform-tab py-3 md:py-5 px-1 md:px-4 flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-3 text-[11px] sm:text-sm md:text-lg font-bold border-b-2 border-transparent text-brand-purple/70 transition-all text-center">
                     <span
-                        class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-brand-white text-xs shadow-md"
+                        class="w-5 h-5 md:w-6 md:h-6 bg-blue-600 rounded-full flex items-center justify-center text-brand-white text-[10px] md:text-xs shadow-md flex-shrink-0"
                         style="font-family: serif;">D</span>
-                    <span class="font-display tracking-wide">DeepSeek AI</span>
+                    <span class="font-display tracking-tight md:tracking-wide leading-tight">DeepSeek<span class="hidden md:inline"> </span><br class="md:hidden">AI</span>
                 </button>
             </div>
 
@@ -556,7 +556,7 @@
         <!-- Balanced 2-column top row: 65/35 ratio, tight gap -->
         <div class="grid grid-cols-1 md:grid-cols-[1.85fr_1fr] gap-4 mb-4">
             <!-- Tech SaaS Growth: zero-waste, dense layout -->
-            <div class="group relative rounded-2xl overflow-hidden h-[500px] flex flex-col bg-brand-white border border-brand-purple/10 shadow-lg pt-4 px-4 pb-4"
+            <div class="group relative rounded-2xl overflow-hidden h-[600px] md:h-[500px] flex flex-col bg-brand-white border border-brand-purple/10 shadow-lg pt-4 px-4 pb-4"
                 data-aos="fade-up" data-aos-delay="0">
 
                 <!-- Tight header: minimal gap above images -->
@@ -582,13 +582,13 @@
                     </div>
                 </div>
 
-                <!-- Image grid: no gutters, images fill cells, no secondary backgrounds -->
-                <div class="flex-1 min-h-0 grid grid-cols-[3fr_2fr] gap-2">
-                    <div class="h-full min-h-0 overflow-hidden rounded-xl">
+                <!-- Image grid: stack main graph above two small graphs on mobile, grid on desktop -->
+                <div class="flex-1 min-h-0 flex flex-col md:grid md:grid-cols-[3fr_2fr] gap-2">
+                    <div class="flex-[2] md:flex-none md:h-full min-h-0 overflow-hidden rounded-xl">
                         <img src="{{ asset('Images/GSC4.jpeg') }}" alt="Main Traffic Graph"
                             class="w-full h-full object-cover object-top rounded-xl">
                     </div>
-                    <div class="grid grid-rows-2 gap-2 h-full min-h-0">
+                    <div class="flex-1 md:flex-none grid grid-cols-2 md:grid-cols-1 md:grid-rows-2 gap-2 md:h-full min-h-0">
                         <div class="min-h-0 overflow-hidden rounded-xl">
                             <img src="{{ asset('Images/GSC2.jpeg') }}" alt="Keyword Graph"
                                 class="w-full h-full object-cover object-top rounded-xl">
@@ -839,8 +839,8 @@
             <div
                 class="bg-brand-white rounded-2xl border border-brand-purple/10 p-6 shadow-xl relative overflow-hidden flex flex-col h-full">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-brand-orange/5 rounded-bl-full -mr-4 -mt-4"></div>
-                <h3 class="text-brand-purple font-bold text-2xl mb-2">Access</h3>
-                <!-- <div class="text-brand-orange text-3xl font-extrabold mb-6">1980</div> -->
+                <h3 class="text-brand-purple font-bold text-2xl mb-1">Access</h3>
+                <div class="text-brand-orange text-3xl font-extrabold mb-5">RM2,980</div>
                 <ul class="space-y-3 mb-8 text-brand-purple/80 text-sm flex-1">
                     <li class="flex justify-between border-b border-brand-purple/10 pb-2">
                         <span>Guaranteed Outlets</span>
@@ -860,17 +860,15 @@
                     </li>
                 </ul>
                 <a href="{{ url('checkout') }}?plan=access"
-                    class="block w-full py-3 bg-brand-purple hover:bg-brand-purple/90 text-center rounded-lg font-bold transition text-brand-white">Get Quote Now</a>
+                    class="block w-full py-3 bg-brand-purple hover:bg-brand-purple/90 text-center rounded-lg font-bold transition text-brand-white">Get Started</a>
             </div>
 
-            <!-- Growth Package (Popular) -->
+            <!-- Growth Package -->
             <div
-                class="bg-brand-white rounded-2xl border-2 border-brand-orange p-6 shadow-2xl relative overflow-hidden transform md:scale-105 z-10 flex flex-col h-[105%]">
-                <div
-                    class="absolute top-0 right-0 bg-brand-orange text-brand-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                    POPULAR</div>
-                <h3 class="text-brand-purple font-bold text-2xl mb-2">Growth</h3>
-                <!-- <div class="text-brand-orange text-3xl font-extrabold mb-6">2380</div> -->
+                class="bg-brand-white rounded-2xl border border-brand-purple/10 p-6 shadow-xl relative overflow-hidden flex flex-col h-full">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-brand-orange/5 rounded-bl-full -mr-4 -mt-4"></div>
+                <h3 class="text-brand-purple font-bold text-2xl mb-1">Growth</h3>
+                <div class="text-brand-orange text-3xl font-extrabold mb-5">RM3,980</div>
                 <ul class="space-y-3 mb-8 text-brand-purple/80 text-sm flex-1">
                     <li class="flex justify-between border-b border-brand-purple/10 pb-2">
                         <span>Guaranteed Outlets</span>
@@ -890,15 +888,18 @@
                     </li>
                 </ul>
                 <a href="{{ url('checkout') }}?plan=growth"
-                    class="block w-full py-3 bg-brand-orange hover:bg-orange-600 text-center rounded-lg font-bold transition text-brand-white shadow-lg shadow-brand-orange/40 mt-auto">Get Quote Now</a>
+                    class="block w-full py-3 bg-brand-purple hover:bg-brand-purple/90 text-center rounded-lg font-bold transition text-brand-white">Get Started</a>
             </div>
 
-            <!-- Authority Package -->
+            <!-- Authority Package (Most Popular) -->
             <div
-                class="bg-brand-white rounded-2xl border border-brand-purple/10 p-6 shadow-xl relative overflow-hidden flex flex-col h-full">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-brand-orange/5 rounded-bl-full -mr-4 -mt-4"></div>
-                <h3 class="text-brand-purple font-bold text-2xl mb-2">Authority</h3>
-                <!-- <div class="text-brand-orange text-3xl font-extrabold mb-6">3980</div> -->
+                class="bg-brand-white rounded-2xl border-2 border-brand-orange p-6 shadow-2xl relative overflow-hidden transform md:scale-105 z-10 flex flex-col h-[105%]">
+                <div
+                    class="absolute top-0 right-0 bg-brand-orange text-brand-white text-xs font-bold px-3 py-1 rounded-bl-lg tracking-wide">
+                    MOST POPULAR
+                </div>
+                <h3 class="text-brand-purple font-bold text-2xl mb-1">Authority</h3>
+                <div class="text-brand-orange text-3xl font-extrabold mb-5">RM4,980</div>
                 <ul class="space-y-3 mb-8 text-brand-purple/80 text-sm flex-1">
                     <li class="flex justify-between border-b border-brand-purple/10 pb-2">
                         <span>Guaranteed Outlets</span>
@@ -918,15 +919,15 @@
                     </li>
                 </ul>
                 <a href="{{ url('checkout') }}?plan=authority"
-                    class="block w-full py-3 bg-brand-purple hover:bg-brand-purple/90 text-center rounded-lg font-bold transition text-brand-white">Get Quote Now</a>
+                    class="block w-full py-3 bg-brand-orange hover:bg-orange-600 text-center rounded-lg font-bold transition text-brand-white shadow-lg shadow-brand-orange/40 mt-auto">Get Started</a>
             </div>
 
             <!-- Ultimate Package -->
             <div
                 class="bg-brand-white rounded-2xl border border-brand-purple/10 p-6 shadow-xl relative overflow-hidden flex flex-col h-full">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-brand-orange/5 rounded-bl-full -mr-4 -mt-4"></div>
-                <h3 class="text-brand-purple font-bold text-2xl mb-2">Ultimate</h3>
-                <!-- <div class="text-brand-orange text-3xl font-extrabold mb-6">4980</div> -->
+                <h3 class="text-brand-purple font-bold text-2xl mb-1">Ultimate</h3>
+                <div class="text-brand-orange text-3xl font-extrabold mb-5">RM5,980</div>
                 <ul class="space-y-3 mb-8 text-brand-purple/80 text-sm flex-1">
                     <li class="flex justify-between border-b border-brand-purple/10 pb-2">
                         <span>Guaranteed Outlets</span>
@@ -946,7 +947,7 @@
                     </li>
                 </ul>
                 <a href="{{ url('checkout') }}?plan=ultimate"
-                    class="block w-full py-3 bg-brand-purple hover:bg-brand-purple/90 text-center rounded-lg font-bold transition text-brand-white">Get Quote Now</a>
+                    class="block w-full py-3 bg-brand-purple hover:bg-brand-purple/90 text-center rounded-lg font-bold transition text-brand-white">Get Started</a>
             </div>
         </div>
 

@@ -5,7 +5,7 @@
 $ftpHost = "prismmediahub.com.newsstraits.com"
 $ftpUser = "deploy@prismmediahub.com.newsstraits.com"
 $ftpPassword = "YOUR_FTP_PASSWORD_HERE"   # <-- Replace with your actual password
-$remotePath = "/home/newsstxd/prismmediahub.com/deploy"
+$remotePath = ""
 $zipName = "prism_media_hub_deploy.zip"
 $zipPath = Join-Path (Split-Path $PSScriptRoot -Parent) $zipName
 
@@ -19,7 +19,7 @@ if ($ftpPassword -eq "YOUR_FTP_PASSWORD_HERE") {
     exit 1
 }
 
-$ftpUri = "ftp://$ftpHost$remotePath/$zipName"
+$ftpUri = "ftp://$ftpHost/$zipName"
 Write-Host "Uploading to $ftpUri ..."
 
 $request = [System.Net.FtpWebRequest]::Create($ftpUri)
